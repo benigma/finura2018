@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Finura</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <link rel="stylesheet" type="text/css" href="css/master.css">
+        <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet">
+    </head>
+    <body class="home">
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        <nav>
+            <div class="logo"><a href="index.html"><img src="img/svg/SVG/logo-white.svg" alt="Finura" /></a></div>
+            <div class="menu"><img src="img/svg/menu.svg" /></div>
+        </nav>
+        <div id="navigation__container">
+            <div class="close__menu">Close <img src="img/svg/arrow-right-small.svg" /></div>
+            <ul>
+                <li><a href="#">Why</a></li>
+                <li><a href="#">What</a></li>
+                <li><a href="#">How</a></li>
+                <li><a href="#">Who</a></li>
+                <li><a href="#">News &amp; Insights</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Client Portal</a></li>
+            </ul>
+            <div class="phone"><a href="tel:+442031027730">+44 (0) 20 3102 7730</a></div>
+        </div>
+        <header>
+            <h1>Lorem ipsum dolor sit amet, adipisicing elit <strong>sed do eiusmod tempor incididunt</strong></h1>
+        </header>
+        <div class="home__menu">
+            <div class="home__menu--item">
+                <div class="menu__item--number">01</div>
+                <div class="menu__item--content">
+                    <h3>Why choose Finura</h3>
+                    <p>Duis consequat consectetur esse qui non in incididunt veniam eiusmod sunt fugiat excepteur cupidatat. Consequat id velit esse sit. Velit occaecat cupidatat aute eu irure cillum eiusmod labore qui qui quis sit occaecat minim.</p>
+                </div>
+            </div>
+            <div class="home__menu--item">
+                <div class="menu__item--number">02</div>
+                <div class="menu__item--content">
+                    <h3>What we do</h3>
+                    <p>Duis consequat consectetur esse qui non in incididunt veniam eiusmod sunt fugiat excepteur cupidatat. Consequat id velit esse sit. Velit occaecat cupidatat aute eu irure cillum eiusmod labore qui qui quis sit occaecat minim.</p>
+                </div>
+            </div>
+            <div class="home__menu--item">
+                <div class="menu__item--number">03</div>
+                <div class="menu__item--content">
+                    <h3>How we work</h3>
+                    <p>Duis consequat consectetur esse qui non in incididunt veniam eiusmod sunt fugiat excepteur cupidatat. Consequat id velit esse sit. Velit occaecat cupidatat aute eu irure cillum eiusmod labore qui qui quis sit occaecat minim.</p>
+                </div>
+            </div>
+        </div>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                
+                $('.menu').click( function () {
+                    $("#navigation__container").addClass("selected");
+                } );
+                $(".close__menu").click(function(){
+                    $("#navigation__container").removeClass("selected");
+                });
+                    
+            });
+        </script>
+    </body>
+</html>

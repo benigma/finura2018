@@ -1,0 +1,52 @@
+// Fonts
+@font-face {
+    font-family: 'aleobold';
+    src: url('../fonts/aleo-bold-webfont.woff2') format('woff2'),
+         url('../fonts/aleo-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'aleolight';
+    src: url('../fonts/aleo-light-webfont.woff2') format('woff2'),
+         url('../fonts/aleo-light-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'aleoregular';
+    src: url('../fonts/aleo-regular-webfont.woff2') format('woff2'),
+         url('../fonts/aleo-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+$headline-light: 'aleolight', Arial, sans-serif;
+$headline-regular: 'aleoregular', Arial, sans-serif;
+$headline-bold: 'aleobold', Arial, sans-serif;
+
+//Colours
+$purple: #094970;
+$gold: #BD9F67;
+$lightblue: #C3EDFF;
+$orange: #F5A623;
+
+$purple-fade: rgba(9,62,96,0.9);
+$lightblue-fade: rgba(195,237,255,0.25);
+
+//Mixins
+@mixin primary-font($weight) {
+    font-family: 'Roboto', Arial, sans-serif;
+    font-style: normal;
+    font-weight: $weight;
+}
+@mixin input-placeholder {
+    &.placeholder { @content; }
+    &:-moz-placeholder { @content; }
+    &::-moz-placeholder { @content; }
+    &:-ms-input-placeholder { @content; }
+    &::-webkit-input-placeholder { @content; }
+}
