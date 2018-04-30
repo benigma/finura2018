@@ -2,7 +2,8 @@
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<!--[if gt IE 8]><!--> 
+    <html  lang="en" class="no-js"> <!--<![endif]-->
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -13,10 +14,11 @@
         <link rel="stylesheet" type="text/css" href="css/master.css">
         <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet">
     </head>
-    <body class="home">
+    <div>
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
+    <div class="home__container">
         <nav>
             <div class="logo"><a href="index.html"><img src="img/svg/SVG/logo-white.svg" alt="Finura" /></a></div>
             <div class="menu"><img src="img/svg/menu.svg" /></div>
@@ -41,7 +43,7 @@
             <div class="home__menu--item">
                 <div class="menu__item--number">01</div>
                 <div class="menu__item--content">
-                    <h3>Why choose Finura</h3>
+                    <h3><a href="why.html">Why choose Finura</a></h3>
                     <p>Duis consequat consectetur esse qui non in incididunt veniam eiusmod sunt fugiat excepteur cupidatat. Consequat id velit esse sit. Velit occaecat cupidatat aute eu irure cillum eiusmod labore qui qui quis sit occaecat minim.</p>
                 </div>
             </div>
@@ -61,18 +63,20 @@
             </div>
         </div>
 
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-        <script>
-            $(document).ready(function(){
-                
-                $('.menu').click( function () {
-                    $("#navigation__container").addClass("selected");
-                } );
-                $(".close__menu").click(function(){
-                    $("#navigation__container").removeClass("selected");
-                });
-                    
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            
+            $('.menu').click( function () {
+                $("#navigation__container").addClass("selected");
+            } );
+            $(".close__menu").click(function(){
+                $("#navigation__container").removeClass("selected");
             });
-        </script>
+                
+        });
+    </script>
     </body>
 </html>

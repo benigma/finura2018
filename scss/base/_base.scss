@@ -27,10 +27,7 @@ body {
     @include primary-font(400);
     color: black;
     font-size: 1em;
-    display: grid;
-    grid-gap: 1.5em;
-    grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: 142px auto;
+    overflow: hidden;
 }
 ol, ul {
     list-style: none;
@@ -66,5 +63,6 @@ h1 {
     & strong {
         font-family: $headline-bold;
         color: white;
+        letter-spacing: 1px;
     }
 }
