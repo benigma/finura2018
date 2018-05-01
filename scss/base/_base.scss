@@ -27,7 +27,7 @@ body {
     @include primary-font(400);
     color: black;
     font-size: 1em;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 ol, ul {
     list-style: none;
@@ -65,4 +65,59 @@ h1 {
         color: white;
         letter-spacing: 1px;
     }
+}
+h3 {
+    @include primary-font(300);
+    font-size: 1em;
+    color: $gold;
+    text-transform: uppercase;
+
+    & strong {
+        @include primary-font(700);
+    }
+
+    &:after {
+        content: '';
+        display: block;
+        width: 32px;
+        height: 2px;
+        background: $lightblue;
+        margin: 12px 0px;
+    }
+}
+p {
+    @include primary-font(300);
+    font-size: 1.125em;
+    line-height: 1.222222222;
+    color: black;
+    margin: 16px 0px;
+}
+a.button {
+    height: auto;
+    width: 70%;
+    padding: 20px 32px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    background: $orange;
+    @include primary-font(300);
+    margin: 48px 0px 0px;
+    text-transform: uppercase;
+
+    & strong {
+        @include primary-font(700);
+    }
+
+    &:hover {
+
+        & img {
+            animation: arrow 1s linear infinite;
+        }
+    }
+}
+a:hover {
+    cursor: pointer;
 }

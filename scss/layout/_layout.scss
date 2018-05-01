@@ -12,14 +12,9 @@
 }
 .default__container {
     display: grid;
-    grid-gap: 1.5em;
+    grid-column-gap: 1.5em;
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: 142px auto;
-
-    &.why {
-        background: url(../img/why-bg.jpg) no-repeat top center;
-        background-size: 100%;
-    }
 }
 
 //Navigation
@@ -114,7 +109,7 @@ nav {
                 text-decoration: none;
                 transition: background 0.25s ease-in-out, color 0.3s ease-in;
                 display: block;
-                padding: 32px 64px 32px;
+                padding: 20px 64px;
 
                 &:hover {
                     color: $gold;
@@ -152,14 +147,28 @@ nav {
 }
 .default__container {
     & header {
-        display: grid;
-        grid-column: 1/7;
+        grid-column: 1/13;
         grid-row: 1/3;
-        background: darken( $purple, 10% );
-        opacity: 0.9;
-        align-items: center;
-        padding: 0 4em;
-        min-height: 800px;
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: auto;
+        grid-gap: 1.5em;
+        height: 100%;
+    
+        &.why {
+            background-image: url('../img/purple-shade.png'), url('../img/why-bg.jpg');
+            background-position: top left, top center;
+            background-repeat: no-repeat, no-repeat;
+            background-size: 50% 100%, cover;
+        }
+    
+        & .intro {
+            height: auto;
+            grid-column: 1/7;
+            display: flex;
+            align-items: center;
+            padding: 12em 4em 4em;
+        }
     }
 }
 
@@ -198,7 +207,6 @@ nav {
                     color: $gold;
                 }
                 & p {
-                    @include primary-font(300);
                     color: white;
                     font-size: 1em;
                     line-height: 1.375;
@@ -231,20 +239,38 @@ nav {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
-    padding: 0px 64px;
+    padding: 0px 64px 64px;
 
     & .page__introduction--item {
-        width: 30%;
+        width: auto;
+        max-width: 310px;
+        opacity: 0;
+        animation: fadeIn 1s ease-in forwards;
+        animation-delay: 1s;
+
+        &:nth-child(2) {
+            animation-delay: 2s;
+        }
+        &:nth-child(3) {
+            animation-delay: 3s;
+        }
+        &:nth-child(4) {
+            animation-delay: 4s;
+        }
+
+        & a {
+            text-decoration: none;
+        }
 
         & .introduction__item--number {
             @include primary-font(700);
-            color: $lightblue;
+            color: white;
             font-size: 3em;
 
             & span {
                 @include primary-font(300);
                 font-size: 50%;
-                color: $lightblue;
+                color: white;
             }
         }
 
@@ -252,16 +278,216 @@ nav {
 
             & h3 {
                 @include primary-font(400);
-                color: black;
+                color: white;
                 font-size: 1.125em;
                 text-transform: uppercase;
                 margin: 12px 0px;
+
+                &:after {
+                    display: none;
+                }
             }
             & p {
-                @include primary-font(300);
-                color: black;
+                color: white;
                 font-size: 0.875em;
+                line-height: 1.25;
             }
+        }
+    }
+}
+
+//Rows
+.row {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-column-gap: 1.5em;
+    grid-column: 1/13;
+    grid-row: auto;
+    border-bottom: 4px solid $gold;
+
+    p:first-of-type {
+        font-family: $headline-regular;
+        font-size: 2.25em;
+    }
+
+    & .why-intro {
+        grid-column: 3/10;
+        padding: 96px 0px;
+        align-self: center;
+    }
+    & .why-relationships {
+        grid-column: 7/12;
+        padding: 96px 0px;
+        align-self: center;
+
+        &-img {
+            grid-column: 1/6;
+
+            & img {
+                width: 100%;
+                display: block;
+            }
+        }
+    }
+    & .why-thinking {
+        grid-column: 2/6;
+        padding: 64px 0px;
+        align-self: center;
+
+        &-img {
+            grid-column: 7/13;
+
+            & img {
+                width: 100%;
+                display: block;
+            }
+        }
+    }
+    & .why-csr {
+        grid-column: 3/8;
+        padding: 96px 0px;
+        align-self: center;
+
+        & p {
+            color: white;
+        }
+    }
+
+    &.csr {
+        background: url('../img/csr-bg.jpg') no-repeat center;
+        background-size: cover;
+    }
+
+    &.lightblue {
+        background: $lightblue-fade;
+    }
+}
+
+.awards-section {
+    grid-column: 1/13;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-column-gap: 1.5em;
+    padding: 64px 0px;
+
+    &-intro {
+        grid-column: 2/9;
+
+        & p:first-of-type {
+            font-family: $headline-regular;
+            font-size: 2.25em;
+        }
+    }
+
+    & .awards {
+        grid-column: 1/13;
+        padding: 32px 120px 0px;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        & .award {
+            width: 33%;
+            text-align: center;
+            margin-bottom: 48px;
+
+            &:nth-child(3n+2) {
+                margin: 0 auto;
+            }
+
+            & h3 {
+                font-family: $headline-regular;
+                color: $gold;
+                font-size: 1.125em;
+
+                &:after {
+                    display: none;
+                }
+            }
+            & p {
+                color: $purple;
+                font-size: 1em;
+                @include primary-font(400);
+                margin: 8px 0px;
+
+                &:last-of-type {
+                    font-size: 1.3125em;
+                    text-transform: uppercase;
+                }
+            }
+        }
+    }
+
+    & .awards-logos {
+        width: 80%;
+        height: auto;
+        margin: auto;
+        grid-column: 2/12;
+
+        & img {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+    }
+}
+
+footer {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-column-gap: 1.5em;
+    border-top: 4px solid $gold;
+    grid-column: 1/13;
+    height: 220px;
+    background: url('../img/footer-bg.png') no-repeat center;
+    background-size: cover;
+    padding: 32px 64px;
+
+    & .logo {
+        grid-column: 1/2;
+        grid-row: 1/3;
+
+        & img {
+            width: 120px;
+            height: auto;
+            display: block;
+        }
+    }
+
+    & .social {
+        grid-column: 6/13;
+        justify-self: end;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: flex-start;
+
+        & a {
+            color: $orange;
+            font-size: 1.5em;
+            text-decoration: none;
+        }
+
+        & .sm-icons {
+            margin-left: 48px;
+
+            & img:nth-child(2) {
+                margin: auto 24px;
+            }
+        }
+    }
+
+    & .disclaimer {
+        grid-column: 6/13;
+
+        & p {
+            color: $lightblue;
+            font-size: 0.625em;
+            line-height: 1.5;
+            text-align: right;
         }
     }
 }
