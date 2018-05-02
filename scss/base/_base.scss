@@ -102,7 +102,6 @@ a.button {
     justify-content: space-between;
     align-items: center;
     color: white;
-    background: $orange;
     @include primary-font(300);
     margin: 48px 0px 0px;
     text-transform: uppercase;
@@ -111,8 +110,29 @@ a.button {
         @include primary-font(700);
     }
 
-    &:hover {
+    &.orange {
+        background-image: linear-gradient(-90deg, #F2CA46 0%, #F5A623 85%);
+    }
+    &.green {
+        background-image: linear-gradient(-90deg, #568273 0%, #669F8C 85%);
+    }
+    &.purple {
+        background-image: linear-gradient(-90deg, #055F96 0%, #094970 85%);
+    }
+    &.gold {
+        background-image: linear-gradient(-90deg, #BFA064 0%, #D0B47D 85%);
+    }
+    &.fountain-blue {
+        background-image: linear-gradient(-90deg, #4EADB3 23%, #42969C 85%);
+    }
+    &.jellybean {
+        background-image: linear-gradient(-90deg, #2B6D95 0%, #3581AF 85%);
+    }
+    &.blue-bayoux {
+        background-image: linear-gradient(-90deg, #4B626D 0%, #66808D 85%);
+    }
 
+    &:hover {
         & img {
             animation: arrow 1s linear infinite;
         }
