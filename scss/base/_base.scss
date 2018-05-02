@@ -105,6 +105,7 @@ a.button {
     @include primary-font(300);
     margin: 48px 0px 0px;
     text-transform: uppercase;
+    text-decoration: none;
 
     & strong {
         @include primary-font(700);

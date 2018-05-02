@@ -1,7 +1,7 @@
 //Grid Layouts
 .home__container {
     display: grid;
-    grid-gap: 1.5em;
+    grid-column-gap: 1.5em;
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: 142px auto;
     background: url(../img/bg.jpg) no-repeat top center;
