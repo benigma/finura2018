@@ -104,13 +104,14 @@ p {
   font-style: normal;
   font-weight: 300;
   font-size: 1.125em;
-  line-height: 1.222222222;
+  line-height: 1.3125;
   color: black;
   margin: 16px 0px; }
 
 a.button {
   height: auto;
   width: 70%;
+  min-width: 310px;
   padding: 20px 32px;
   display: flex;
   flex-direction: row;
@@ -131,17 +132,17 @@ a.button {
   a.button.orange {
     background-image: linear-gradient(-90deg, #F2CA46 0%, #F5A623 85%); }
   a.button.green {
-    background-image: linear-gradient(-90deg, #568273 0%, #669F8C 85%); }
+    background-image: linear-gradient(-90deg, #669F8C 0%, #568273 85%); }
   a.button.purple {
     background-image: linear-gradient(-90deg, #055F96 0%, #094970 85%); }
   a.button.gold {
-    background-image: linear-gradient(-90deg, #BFA064 0%, #D0B47D 85%); }
+    background-image: linear-gradient(-90deg, #D0B47D 0%, #BFA064 85%); }
   a.button.fountain-blue {
     background-image: linear-gradient(-90deg, #4EADB3 23%, #42969C 85%); }
   a.button.jellybean {
-    background-image: linear-gradient(-90deg, #2B6D95 0%, #3581AF 85%); }
+    background-image: linear-gradient(-90deg, #3581AF 0%, #2B6D95 85%); }
   a.button.blue-bayoux {
-    background-image: linear-gradient(-90deg, #4B626D 0%, #66808D 85%); }
+    background-image: linear-gradient(-90deg, #66808D 0%, #4B626D 85%); }
   a.button:hover img {
     animation: arrow 1s linear infinite; }
 
@@ -159,7 +160,7 @@ a:hover {
   min-height: 100vh;
   overflow: hidden; }
 
-.default__container {
+.service__container {
   display: grid;
   grid-column-gap: 1.5em;
   grid-template-columns: repeat(12, 1fr);
@@ -264,7 +265,7 @@ nav {
   padding: 0 4em;
   height: 100vh; }
 
-.default__container header {
+.service__container header {
   grid-column: 1/13;
   grid-row: 1/3;
   display: grid;
@@ -272,25 +273,55 @@ nav {
   grid-template-rows: auto;
   grid-gap: 1.5em;
   height: 100%; }
-  .default__container header.why {
+  .service__container header.why {
     background-image: url("../img/purple-shade.png"), url("../img/why-bg.jpg");
     background-position: top left, top center;
     background-repeat: no-repeat, no-repeat;
     background-size: 50% 100%, cover; }
-  .default__container header.how {
+  .service__container header.what {
+    background-image: url("../img/purple-shade.png"), url("../img/what-bg.jpg");
+    background-position: top left, top center;
+    background-repeat: no-repeat, no-repeat;
+    background-size: 50% 100%, cover;
+    min-height: 900px; }
+    .service__container header.what .intro {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      align-items: flex-start;
+      padding: 12em 4em 4em; }
+      .service__container header.what .intro h1 {
+        font-size: 1.5em;
+        color: #C3EDFF; }
+        .service__container header.what .intro h1 strong {
+          color: white;
+          font-size: 1.75em; }
+      .service__container header.what .intro h3 {
+        padding-bottom: 24px; }
+        .service__container header.what .intro h3::after {
+          display: none; }
+      .service__container header.what .intro p {
+        font-size: 1.125em;
+        color: white; }
+  .service__container header.how {
     background-image: url("../img/gold-shade.png"), url("../img/how-bg.jpg");
     background-position: top left, top center;
     background-repeat: no-repeat, no-repeat;
     background-size: 50% 100%, cover; }
-    .default__container header.how h1 {
+    .service__container header.how h1 {
       color: #C3EDFF; }
-  .default__container header .intro {
+  .service__container header .intro {
     height: auto;
     grid-column: 1/7;
     display: flex;
     align-items: center;
-    padding: 12em 4em 4em;
+    padding: 0 4em;
     min-height: 640px; }
+  .service__container header.contact {
+    background-image: url("../img/purple-shade.png"), url("../img/contact-bg.jpg");
+    background-position: top left, top center;
+    background-repeat: no-repeat, no-repeat;
+    background-size: 50% 100%, cover; }
 
 .home__menu {
   grid-row: 1/3;
@@ -339,12 +370,13 @@ nav {
   grid-column: 1/13;
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   justify-content: space-between;
   padding: 0px 64px 64px; }
   .page__introduction .page__introduction--item {
     width: auto;
     max-width: 310px;
+    margin-right: 1.5em;
     opacity: 0;
     animation: fadeIn 1s ease-in forwards;
     animation-delay: 1s; }
@@ -354,6 +386,8 @@ nav {
       animation-delay: 3s; }
     .page__introduction .page__introduction--item:nth-child(4) {
       animation-delay: 4s; }
+    .page__introduction .page__introduction--item:last-of-type {
+      margin-right: 0px; }
     .page__introduction .page__introduction--item a {
       text-decoration: none; }
       .page__introduction .page__introduction--item a:hover > .introduction__item--number {
@@ -425,8 +459,72 @@ nav {
   .row.csr {
     background: url("../img/csr-bg.jpg") no-repeat center;
     background-size: cover; }
-  .row.lightblue {
-    background: rgba(195, 237, 255, 0.2); }
+  .row .what-intro {
+    grid-column: 4/12;
+    padding: 96px 64px;
+    align-self: center; }
+  .row .what-services {
+    grid-column: 1/13;
+    padding: 64px;
+    align-self: center;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-column-gap: 1.5em; }
+    .row .what-services-intro {
+      grid-column: 1/8; }
+  .row .what-services-items {
+    padding-top: 32px;
+    grid-column: 1/13;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-gap: 1.5em; }
+    .row .what-services-items .service-item {
+      grid-column: auto/span 4;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      min-height: 350px; }
+      .row .what-services-items .service-item.orange {
+        background-image: linear-gradient(-90deg, #F2CA46 0%, #F5A623 85%); }
+      .row .what-services-items .service-item.green {
+        background-image: linear-gradient(-90deg, #669F8C 0%, #568273 85%); }
+      .row .what-services-items .service-item.purple {
+        background-image: linear-gradient(-90deg, #055F96 0%, #094970 85%); }
+      .row .what-services-items .service-item.gold {
+        background-image: linear-gradient(-90deg, #D0B47D 0%, #BFA064 85%); }
+      .row .what-services-items .service-item.fountain-blue {
+        background-image: linear-gradient(-90deg, #4EADB3 23%, #42969C 85%); }
+      .row .what-services-items .service-item.jellybean {
+        background-image: linear-gradient(-90deg, #3581AF 0%, #2B6D95 85%); }
+      .row .what-services-items .service-item.blue-bayoux {
+        background-image: linear-gradient(-90deg, #66808D 0%, #4B626D 85%); }
+      .row .what-services-items .service-item .service-content {
+        padding: 24px 24px 0px; }
+        .row .what-services-items .service-item .service-content h3 {
+          color: white;
+          font-size: 1.3125em;
+          line-height: 1.142857143; }
+          .row .what-services-items .service-item .service-content h3::after {
+            display: none; }
+        .row .what-services-items .service-item .service-content p {
+          font-family: 'Roboto', Arial, sans-serif;
+          font-style: normal;
+          font-weight: 300;
+          color: white;
+          font-size: 1em;
+          line-height: 1.3125; }
+      .row .what-services-items .service-item a.button {
+        width: 100%; }
+  .row.casestudies {
+    background: url("../img/casestudies-bg.jpg") no-repeat bottom center;
+    background-size: cover; }
+  .row .what-casestudies {
+    grid-column: 6/13;
+    padding: 96px 64px;
+    align-self: center; }
+    .row .what-casestudies p {
+      color: white; }
   .row .how-onborading {
     grid-column: 4/12;
     align-self: center;
@@ -466,6 +564,10 @@ nav {
       font-style: normal;
       font-weight: 300;
       font-size: 1em; }
+  .row.lightgold {
+    background: rgba(189, 159, 103, 0.1); }
+  .row.lightblue {
+    background: rgba(195, 237, 255, 0.2); }
 
 .awards-section {
   grid-column: 1/13;
