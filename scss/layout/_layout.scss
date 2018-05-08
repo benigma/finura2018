@@ -20,6 +20,15 @@
         grid-template-rows: auto;
         grid-gap: 1.5em;
         height: 100%;
+
+        & .intro {
+            height: auto;
+            grid-column: 1/7;
+            display: flex;
+            align-items: center;
+            padding: 0 4em;
+            min-height: 640px;
+        }
     
         &.why {
             background-image: url('../img/purple-shade.png'), url('../img/why-bg.jpg');
@@ -67,6 +76,13 @@
             }
         }
 
+        &.retirement {
+            background-image: url('../img/purple-shade.png'), url('../img/retirement-bg.jpg');
+            background-position: top left, top center;
+            background-repeat: no-repeat, no-repeat;
+            background-size: 50% 100%, cover;
+        }
+
         &.how {
             background-image: url('../img/gold-shade.png'), url('../img/how-bg.jpg');
             background-position: top left, top center;
@@ -77,21 +93,30 @@
                 color: $lightblue;
             }
         }
-    
-        & .intro {
-            height: auto;
-            grid-column: 1/7;
-            display: flex;
-            align-items: center;
-            padding: 0 4em;
-            min-height: 640px;
-        }
 
         &.contact {
             background-image: url('../img/purple-shade.png'), url('../img/contact-bg.jpg');
             background-position: top left, top center;
             background-repeat: no-repeat, no-repeat;
             background-size: 50% 100%, cover;
+        }
+
+        &.fees {
+            background-image: url('../img/purple-shade.png'), url('../img/fees-bg.jpg');
+            background-position: top left, top center;
+            background-repeat: no-repeat, no-repeat;
+            background-size: 50% 100%, cover;
+
+            & .intro {
+                display: flex;
+                flex-direction: column;
+                flex-wrap: wrap;
+                justify-content: center;
+
+                & p {
+                    color: white;
+                }
+            }
         }
     }
 }
@@ -381,6 +406,27 @@
         }
     }
 
+    & .service-content {
+        grid-column: 6/13;
+        padding: 64px;
+    }
+    & .service-sidebar {
+        grid-column: 1/5;
+        padding: 128px 64px 64px;
+
+        & p:first-of-type {
+            @include primary-font(300);
+            color: black;
+            font-size: 1em;
+            line-height: 1.3125;
+            padding-bottom: 16px;
+        }
+        & a.button {
+            width: 100%;
+            margin: 16px 0px 0px;
+        }
+    }
+
     & .how-onborading {
         grid-column: 4/12;
         align-self: center;
@@ -446,6 +492,29 @@
     }
 }
 
+.contact-intro {
+    grid-column: 1/6;
+    padding: 96px 64px;
+
+    & a.tel {
+        color: $orange;
+        text-decoration: none;
+        font-size: 2em;
+        margin: 1em 0;
+    }
+}
+
+// Fees Page
+.fees-section {
+    grid-column: 1/8;
+    padding: 64px 0px 64px 64px;
+}
+.fees-documents {
+    grid-column: 9/13; 
+    padding: 64px 64px 64px 0px;
+}
+
+// Awards Section
 .awards-section {
     grid-column: 1/13;
     display: grid;
