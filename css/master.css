@@ -108,6 +108,12 @@ p {
   color: black;
   margin: 16px 0px; }
 
+a.tel {
+  color: #F5A623;
+  text-decoration: none;
+  font-size: 2em;
+  margin: 1em 0; }
+
 a.button {
   height: auto;
   width: 70%;
@@ -310,6 +316,100 @@ nav {
       .service__container header.what .intro p {
         font-size: 1.125em;
         color: white; }
+    .service__container header.what .slide-nav {
+      grid-column: 1/13;
+      grid-row: 3;
+      align-self: end;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: space-between;
+      z-index: 900;
+      width: 100%;
+      padding: 0px 64px 64px; }
+      .service__container header.what .slide-nav label {
+        cursor: pointer;
+        display: inline-block;
+        width: auto;
+        max-width: 310px;
+        opacity: 0;
+        animation: fadeIn 1s ease-in forwards; }
+        .service__container header.what .slide-nav label:first-of-type {
+          display: none; }
+        .service__container header.what .slide-nav label:nth-child(2) {
+          animation-delay: 1s; }
+        .service__container header.what .slide-nav label:nth-child(3) {
+          animation-delay: 2s; }
+        .service__container header.what .slide-nav label:nth-child(4) {
+          animation-delay: 3s; }
+        .service__container header.what .slide-nav label:hover > .slide__item--number {
+          color: #BD9F67; }
+        .service__container header.what .slide-nav label:hover > .slide__item--content h3 {
+          color: #C3EDFF; }
+    .service__container header.what .slide__item--number {
+      font-size: 3em;
+      color: white;
+      font-family: 'Roboto', Arial, sans-serif;
+      font-style: normal;
+      font-weight: 700; }
+      .service__container header.what .slide__item--number > span {
+        font-size: 50%;
+        font-family: 'Roboto', Arial, sans-serif;
+        font-style: normal;
+        font-weight: 300; }
+    .service__container header.what .slide__item--content h3 {
+      color: white;
+      font-size: 1.125em;
+      margin: 12px 0px;
+      font-weight: 700; }
+      .service__container header.what .slide__item--content h3::after {
+        display: none; }
+    .service__container header.what .slide__item--content p {
+      color: white;
+      font-size: 0.875em;
+      line-height: 1.25;
+      margin: 0px 0px; }
+    .service__container header.what .slide {
+      width: 100%;
+      height: 900px;
+      position: absolute;
+      top: 0;
+      left: 100%;
+      z-index: 10; }
+    .service__container header.what .slide-1 {
+      background-image: url("../img/purple-shade.png"), url("../img/what-bg.jpg");
+      background-position: top left, top center;
+      background-repeat: no-repeat, no-repeat;
+      background-size: 50% 100%, cover; }
+    .service__container header.what .slide-2 {
+      background-image: url("../img/purple-shade.png"), url("../img/services-bg.jpg");
+      background-position: top left, top center;
+      background-repeat: no-repeat, no-repeat;
+      background-size: 50% 100%, cover; }
+    .service__container header.what .slide-3 {
+      background-image: url("../img/purple-shade.png"), url("../img/lifestyle-bg.jpg");
+      background-position: top left, top center;
+      background-repeat: no-repeat, no-repeat;
+      background-size: 50% 100%, cover; }
+    .service__container header.what .slide-4 {
+      background-image: url("../img/purple-shade.png"), url("../img/coaching-bg.jpg");
+      background-position: top left, top center;
+      background-repeat: no-repeat, no-repeat;
+      background-size: 50% 100%, cover; }
+    .service__container header.what [id^="slide"]:checked + .slide {
+      left: 0;
+      z-index: 100; }
+    .service__container header.what section .intro {
+      height: auto;
+      width: 50%;
+      grid-column: 1/7;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start; }
+      .service__container header.what section .intro p {
+        font-size: 0.875em; }
+      .service__container header.what section .intro a.button {
+        margin-top: 16px; }
   .service__container header.retirement {
     background-image: url("../img/purple-shade.png"), url("../img/retirement-bg.jpg");
     background-position: top left, top center;
@@ -322,6 +422,52 @@ nav {
     background-size: 50% 100%, cover; }
     .service__container header.how h1 {
       color: #C3EDFF; }
+  .service__container header.who {
+    background-image: url("../img/purple-shade.png"), url("../img/who-bg.jpg");
+    background-position: top left, top center;
+    background-repeat: no-repeat, no-repeat;
+    background-size: 50% 100%, cover;
+    height: calc(100% - 256px); }
+    .service__container header.who h1 {
+      color: #C3EDFF; }
+    .service__container header.who .intro {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      align-items: flex-start; }
+      .service__container header.who .intro p {
+        color: white; }
+    .service__container header.who .leadership-team {
+      grid-column: 1/13;
+      padding: 0px 64px;
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      grid-column-gap: 1.5em;
+      margin-top: 128px; }
+      .service__container header.who .leadership-team .team-profile {
+        grid-column: auto/span 4; }
+        .service__container header.who .leadership-team .team-profile .avatar img {
+          width: 100%;
+          height: auto;
+          border: 4px solid #BD9F67; }
+        .service__container header.who .leadership-team .team-profile .profile h3 {
+          font-family: "aleoregular", Arial, sans-serif;
+          font-size: 1.75em;
+          color: #BD9F67;
+          text-transform: none;
+          margin: 1em 0px 0.5em; }
+          .service__container header.who .leadership-team .team-profile .profile h3::after {
+            display: none; }
+        .service__container header.who .leadership-team .team-profile .profile h4 {
+          font-family: 'Roboto', Arial, sans-serif;
+          font-style: normal;
+          font-weight: 400;
+          color: #094970;
+          font-size: 1.125em;
+          text-transform: uppercase; }
+        .service__container header.who .leadership-team .team-profile .profile p a {
+          color: #094970; }
   .service__container header.contact {
     background-image: url("../img/purple-shade.png"), url("../img/contact-bg.jpg");
     background-position: top left, top center;
@@ -336,7 +482,8 @@ nav {
       display: flex;
       flex-direction: column;
       flex-wrap: wrap;
-      justify-content: center; }
+      justify-content: center;
+      align-items: flex-start; }
       .service__container header.fees .intro p {
         color: white; }
 
@@ -598,6 +745,79 @@ nav {
       font-style: normal;
       font-weight: 300;
       font-size: 1em; }
+  .row.who {
+    border: none;
+    padding: 64px; }
+    .row.who .advisers {
+      grid-column: 1/9;
+      display: grid;
+      grid-template-columns: repeat(8, 1fr);
+      grid-gap: 1.5em; }
+      .row.who .advisers .adviser {
+        grid-column: auto/span 4; }
+        .row.who .advisers .adviser h3 {
+          text-transform: none;
+          font-family: "aleoregular", Arial, sans-serif;
+          color: #BD9F67;
+          font-size: 1.3125em;
+          margin: 1em 0 0.5em; }
+          .row.who .advisers .adviser h3::after {
+            display: none; }
+        .row.who .advisers .adviser h4 {
+          font-family: 'Roboto', Arial, sans-serif;
+          font-style: normal;
+          font-weight: 300;
+          text-transform: uppercase;
+          color: #094970;
+          font-size: 1.125em; }
+        .row.who .advisers .adviser p {
+          margin: 0.5em 0; }
+          .row.who .advisers .adviser p:first-of-type {
+            font-family: 'Roboto', Arial, sans-serif;
+            font-style: normal;
+            font-weight: 300;
+            font-size: 1em; }
+          .row.who .advisers .adviser p a {
+            font-size: 1em;
+            color: #094970; }
+    .row.who .advisers-intro {
+      grid-column: 9/13; }
+  .row.support {
+    border-top: 4px solid #C3EDFF;
+    border-color: #C3EDFF;
+    background: rgba(195, 237, 255, 0.2);
+    padding: 64px; }
+    .row.support h3 {
+      grid-column: 1/13;
+      width: 100%; }
+    .row.support .support-team {
+      grid-column: auto/span 4;
+      margin-bottom: 1.5em; }
+      .row.support .support-team h3 {
+        text-transform: none;
+        font-family: "aleoregular", Arial, sans-serif;
+        color: #BD9F67;
+        font-size: 1.3125em;
+        margin: 1em 0 0.5em; }
+        .row.support .support-team h3::after {
+          display: none; }
+      .row.support .support-team h4 {
+        font-family: 'Roboto', Arial, sans-serif;
+        font-style: normal;
+        font-weight: 300;
+        text-transform: uppercase;
+        color: #094970;
+        font-size: 1.125em; }
+      .row.support .support-team p {
+        margin: 0.5em 0; }
+        .row.support .support-team p:first-of-type {
+          font-family: 'Roboto', Arial, sans-serif;
+          font-style: normal;
+          font-weight: 300;
+          font-size: 1em; }
+        .row.support .support-team p a {
+          font-size: 1em;
+          color: #094970; }
   .row.lightgold {
     background: rgba(189, 159, 103, 0.1); }
   .row.lightblue {
@@ -606,11 +826,6 @@ nav {
 .contact-intro {
   grid-column: 1/6;
   padding: 96px 64px; }
-  .contact-intro a.tel {
-    color: #F5A623;
-    text-decoration: none;
-    font-size: 2em;
-    margin: 1em 0; }
 
 .fees-section {
   grid-column: 1/8;
@@ -619,6 +834,41 @@ nav {
 .fees-documents {
   grid-column: 9/13;
   padding: 64px 64px 64px 0px; }
+  .fees-documents .document {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center; }
+    .fees-documents .document::before {
+      content: '';
+      background: url("../img/pdf.png") no-repeat top left;
+      background-size: contain;
+      width: 31px;
+      height: 41px;
+      margin-top: 16px; }
+    .fees-documents .document h3 {
+      margin-left: 17px; }
+      .fees-documents .document h3::after {
+        display: none; }
+      .fees-documents .document h3 a {
+        font-family: 'Roboto', Arial, sans-serif;
+        font-style: normal;
+        font-weight: 400;
+        color: #094970;
+        text-decoration: none; }
+    .fees-documents .document p {
+      margin: 0px;
+      margin-left: 48px;
+      font-family: 'Roboto', Arial, sans-serif;
+      font-style: normal;
+      font-weight: 300;
+      font-size: 0.875em; }
+      .fees-documents .document p::first-of-type {
+        font-family: 'Roboto', Arial, sans-serif;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 0.875em;
+        margin: 0px; }
 
 .awards-section {
   grid-column: 1/13;

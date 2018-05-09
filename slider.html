@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="css/master.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet">
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            width: 100%;
+        }
+        .slide-nav {
+            grid-column: 1/13;
+            grid-row: 3;
+            align-self: end;
+            display: grid;
+            z-index: 900;
+            width: 100%;
+            padding: 0px 64px 32px;
+        }
+        .slide-nav label {
+            cursor: pointer;
+            display: inline-block;
+            line-height: 2.125;
+            width: auto;
+            max-width: 310px;
+            margin-right: 1.5em;
+            opacity: 0;
+            animation: fadeIn 1s ease-in forwards;
+            animation-delay: 1s;
+        }
+        .slide-nav label:nth-child(2) {
+            grid-column: 1/4;
+        }
+        .slide-nav label:nth-child(3) {
+            grid-column: 5/8;
+        }
+        .slide-nav label:nth-child(4) {
+            grid-column: 9/12;
+        }
+        .slide-nav label:first-of-type {
+            display: none;
+        }
+        .slide__item--number {
+            font-size: 3em;
+            color: lightblue;
+            font-weight: 700;
+        }
+        .slide__item--number > span {
+            font-size: 50%;
+            font-weight: 300;
+        }
+        .slide__item--content h3 {
+            color: white;
+            font-size: 1.125em;
+            margin: 0px 0px;
+            font-weight: 700;
+        }
+        .slide__item--content h3::after {
+            display: none;
+        }
+        .slide__item--content p {
+            color: white;
+            font-size: 0.875em;
+            line-height: 1.25;
+            margin: 0px 0px;
+        }
+        .slide {
+            width: 100%;
+            height: 900px;
+            position: absolute;
+            top: 0;
+            left: 100%;
+            z-index: 10;
+        }
+        .slide-1 {
+            background-image: url('img/purple-shade.png'), url('img/what-bg.jpg');
+            background-position: top left, top center;
+            background-repeat: no-repeat, no-repeat;
+            background-size: 50% 100%, cover;
+        }
+        .slide-2 {
+            background-image: url('img/purple-shade.png'), url('img/services-bg.jpg');
+            background-position: top left, top center;
+            background-repeat: no-repeat, no-repeat;
+            background-size: 50% 100%, cover;
+        }
+        .slide-3 {
+            background-image: url('img/purple-shade.png'), url('img/lifestyle-bg.jpg');
+            background-position: top left, top center;
+            background-repeat: no-repeat, no-repeat;
+            background-size: 50% 100%, cover;
+        }
+        .slide-4 {
+            background-image: url('img/purple-shade.png'), url('img/coaching-bg.jpg');
+            background-position: top left, top center;
+            background-repeat: no-repeat, no-repeat;
+            background-size: 50% 100%, cover;
+        }
+        [id^="slide"]:checked + .slide {
+            left: 0;
+            z-index: 100;
+        }
+        section .intro {
+            height: auto;
+            width: 50%;
+            grid-column: 1/7;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0 4em;
+            min-height: 640px;
+        }
+        section .intro p {
+            font-size: 0.875em;
+        }
+    </style>
+</head>
+<body>
+    <div class="service__container">
+        <nav>
+            <div class="logo"><a href="index.html"><img src="img/svg/logo-white.svg" alt="Finura" /></a></div>
+            <div class="menu"><img src="img/svg/menu.svg" /></div>
+        </nav>
+        <div id="navigation__container">
+            <div class="close__menu">Close <img src="img/svg/arrow-right-small.svg" /></div>
+            <ul>
+                <li><a href="why.html">Why</a></li>
+                <li><a href="what.html">What</a></li>
+                <li><a href="how.html">How</a></li>
+                <li><a href="who.html">Who</a></li>
+                <li><a href="#">News &amp; Insights</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="#">Client Portal</a></li>
+            </ul>
+            <div class="phone"><a href="tel:+442031027730">+44 (0) 20 3102 7730</a></div>
+        </div>
+
+        <header class="what">
+
+            <div class="slide-nav">
+                <label for="slide-1-trigger"></label>
+                <label for="slide-2-trigger">
+                    <div class="slide__item--number">
+                        2<span>.01</span>
+                    </div>
+                    <div class="slide__item--content">
+                        <h3>Our Services</h3>
+                        <p>Deserunt id eu sit deserunt exercitation aliqua et sunt irure consectetur Lorem. Id esse aliqua enim dolore commodo. Consectetur tempor officia duis aliquip consectetur fugiat dolor tempor reprehenderit tempor irure cillum dolore.</p>
+                    </div>
+                </label>
+                <label for="slide-3-trigger">
+                    <div class="slide__item--number">
+                        2<span>.02</span>
+                    </div>
+                    <div class="slide__item--content">
+                        <h3>Lifestyle Modelling</h3>
+                        <p>Deserunt id eu sit deserunt exercitation aliqua et sunt irure consectetur Lorem. Id esse aliqua enim dolore commodo. Consectetur tempor officia duis aliquip consectetur fugiat dolor tempor reprehenderit tempor irure cillum dolore.</p>
+                    </div>
+                </label>
+                <label for="slide-4-trigger">
+                    <div class="slide__item--number">
+                        2<span>.03</span>
+                    </div>
+                    <div class="slide__item--content">
+                        <h3>Behavoural Finance</h3>
+                        <p>Deserunt id eu sit deserunt exercitation aliqua et sunt irure consectetur Lorem. Id esse aliqua enim dolore commodo. Consectetur tempor officia duis aliquip consectetur fugiat dolor tempor reprehenderit tempor irure cillum dolore.</p>
+                    </div>
+                </label>
+            </div>
+
+            <input id="slide-1-trigger" type="radio" name="slides" checked>
+            <section class="slide slide-1">
+                <div class="intro">
+                    <h3>What <strong>we do</strong></h3>
+                    <h1>We get to<br /><strong>know you</strong></h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                </div>
+            </section>
+            <input id="slide-2-trigger" type="radio" name="slides">
+            <section class="slide slide-2">
+                <div class="intro">
+                    <h3>What <strong>we do</strong></h3>
+                    <h1>Our<br /><strong>Services</strong></h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                </div>
+            </section>
+            <input id="slide-3-trigger" type="radio" name="slides">
+            <section class="slide slide-3">
+                <div class="intro">
+                    <h3>What <strong>we do</strong></h3>
+                    <h1>Lifestyle planning<br /><strong>and modelling</strong></h1>
+                    <p>Lifestyle planning and modelling is about defining and committing your individual aspirations to a visual financial plan. We can test ideas you thought not possible, such as early retirement or we can stress test market conditions.</p>
+                    <p>We can factor in cool fees, increases in earnings or sabbaticals and cautious or motivate divestment strategies. By creating plan and being accountable to it, we can ensure that our solutions and planning are working toward something identifiable and unique rather than simply being an off the shelf solution.</p>
+                </div>
+            </section>
+            <input id="slide-4-trigger" type="radio" name="slides">
+            <section class="slide slide-4">
+                <div class="intro">
+                    <h3>What <strong>we do</strong></h3>
+                    <h1>Behavioural finance <br /><strong>and coaching</strong></h1>
+                    <p>As human beings we are all subject to biases and prejudices that are a result of our experience. As psychologists have noted that problem with these biases is that many are unseen and a function of our subconscious. This can be seen most readily in e.g. famous BF experiment. If these biases are unrecognised this will lead to erroneous decision making. </p>
+                    <p>Our role is to help you identify these biases or tendencies and to strip back the media noise and conflicting information to deliver planning that works because it is proven, not due to timing or luck.</p>
+                </div>
+            </section>
+        </header>
+    </div>
+
+</body>
+</html>

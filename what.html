@@ -30,11 +30,75 @@
         </div>
 
         <header class="what">
-            <div class="intro">
-                <h3>What <strong>we do</strong></h3>
-                <h1>We get to<br /><strong>know you</strong></h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+
+            <div class="slide-nav">
+                <label for="slide-1-trigger"></label>
+                <label for="slide-2-trigger">
+                    <div class="slide__item--number">
+                        2<span>.01</span>
+                    </div>
+                    <div class="slide__item--content">
+                        <h3>Our Services</h3>
+                        <p>Deserunt id eu sit deserunt exercitation aliqua et sunt irure consectetur Lorem. Id esse aliqua enim dolore commodo. Consectetur tempor officia duis aliquip consectetur fugiat dolor tempor reprehenderit tempor irure cillum dolore.</p>
+                    </div>
+                </label>
+                <label for="slide-3-trigger">
+                    <div class="slide__item--number">
+                        2<span>.02</span>
+                    </div>
+                    <div class="slide__item--content">
+                        <h3>Lifestyle Modelling</h3>
+                        <p>Deserunt id eu sit deserunt exercitation aliqua et sunt irure consectetur Lorem. Id esse aliqua enim dolore commodo. Consectetur tempor officia duis aliquip consectetur fugiat dolor tempor reprehenderit tempor irure cillum dolore.</p>
+                    </div>
+                </label>
+                <label for="slide-4-trigger">
+                    <div class="slide__item--number">
+                        2<span>.03</span>
+                    </div>
+                    <div class="slide__item--content">
+                        <h3>Behavoural Finance</h3>
+                        <p>Deserunt id eu sit deserunt exercitation aliqua et sunt irure consectetur Lorem. Id esse aliqua enim dolore commodo. Consectetur tempor officia duis aliquip consectetur fugiat dolor tempor reprehenderit tempor irure cillum dolore.</p>
+                    </div>
+                </label>
             </div>
+
+            <input id="slide-1-trigger" type="radio" name="slides" checked>
+            <section class="slide slide-1">
+                <div class="intro">
+                    <h3>What <strong>we do</strong></h3>
+                    <h1>We get to<br /><strong>know you</strong></h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                </div>
+            </section>
+            <input id="slide-2-trigger" type="radio" name="slides">
+            <section class="slide slide-2">
+                <div class="intro">
+                    <h3>What <strong>we do</strong></h3>
+                    <h1>Our<br /><strong>Services</strong></h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    <a class="button purple" href="#services"><span>Explore our <strong>range of services</strong></span> <img src="img/svg/arrow-right-small.svg" /></a>
+                </div>
+            </section>
+            <input id="slide-3-trigger" type="radio" name="slides">
+            <section class="slide slide-3">
+                <div class="intro">
+                    <h3>What <strong>we do</strong></h3>
+                    <h1>Lifestyle planning<br /><strong>and modelling</strong></h1>
+                    <p>Lifestyle planning and modelling is about defining and committing your individual aspirations to a visual financial plan. We can test ideas you thought not possible, such as early retirement or we can stress test market conditions.</p>
+                    <p>We can factor in cool fees, increases in earnings or sabbaticals and cautious or motivate divestment strategies. By creating plan and being accountable to it, we can ensure that our solutions and planning are working toward something identifiable and unique rather than simply being an off the shelf solution.</p>
+                    <a class="button orange" href="#case-studies"><span>See some <strong>Case Studies</strong></span> <img src="img/svg/arrow-right-small.svg" /></a>
+                </div>
+            </section>
+            <input id="slide-4-trigger" type="radio" name="slides">
+            <section class="slide slide-4">
+                <div class="intro">
+                    <h3>What <strong>we do</strong></h3>
+                    <h1>Behavioural finance <br /><strong>and coaching</strong></h1>
+                    <p>As human beings we are all subject to biases and prejudices that are a result of our experience. As psychologists have noted that problem with these biases is that many are unseen and a function of our subconscious. This can be seen most readily in e.g. famous BF experiment. If these biases are unrecognised this will lead to erroneous decision making. </p>
+                    <p>Our role is to help you identify these biases or tendencies and to strip back the media noise and conflicting information to deliver planning that works because it is proven, not due to timing or luck.</p>
+                    <a class="button fountain-blue" href="#"><span>Take our <strong>Investment IQ Test</strong></span> <img src="img/svg/arrow-right-small.svg" /></a>
+                </div>
+            </section>
         </header>
 
         <div class="row lightgold">
@@ -43,7 +107,7 @@
             </div>
         </div>
 
-        <div class="row">
+        <div class="row" id="services">
             <div class="what-services">
                 <div class="what-services-intro">
                     <h3><strong>Professional</strong> Services</h3>
@@ -99,7 +163,7 @@
             </div>
         </div>
 
-        <div class="row casestudies">
+        <div class="row casestudies" id="case-studies">
             <div class="what-casestudies">
                 <h3><strong>Case</strong> Studies</h3>
                 <p>When it comes to clients, we have some of the  best. But don’t take our word for it, see what some of them have to say.</p>

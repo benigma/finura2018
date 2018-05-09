@@ -92,6 +92,13 @@ p {
     color: black;
     margin: 16px 0px;
 }
+a.tel {
+    color: $orange;
+    text-decoration: none;
+    font-size: 2em;
+    margin: 1em 0;
+}
+
 a.button {
     height: auto;
     width: 70%;

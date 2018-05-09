@@ -74,6 +74,130 @@
                     color: white;
                 }
             }
+
+            & .slide-nav {
+                grid-column: 1/13;
+                grid-row: 3;
+                align-self: end;
+                display: flex;
+                flex-direction: row;
+                flex-wrap: nowrap;
+                justify-content: space-between;
+                z-index: 900;
+                width: 100%;
+                padding: 0px 64px 64px;
+            
+                & label {
+                    cursor: pointer;
+                    display: inline-block;
+                    width: auto;
+                    max-width: 310px;
+                    opacity: 0;
+                    animation: fadeIn 1s ease-in forwards;
+            
+                    &:first-of-type {
+                        display: none;
+                    }
+                    &:nth-child(2) {
+                        animation-delay: 1s
+                    }
+                    &:nth-child(3) {
+                        animation-delay: 2s
+                    }
+                    &:nth-child(4) {
+                        animation-delay: 3s
+                    }
+                    &:hover > .slide__item--number {
+                        color: $gold;
+                    }
+                    &:hover > .slide__item--content h3 {
+                        color: $lightblue;
+                    }
+                }
+            }
+            & .slide__item--number {
+                font-size: 3em;
+                color: white;
+                @include primary-font(700);
+            
+                & > span {
+                    font-size: 50%;
+                    @include primary-font(300);
+                }
+            }
+            & .slide__item--content {
+                & h3 {
+                    color: white;
+                    font-size: 1.125em;
+                    margin: 12px 0px;
+                    font-weight: 700;
+
+                    &::after {
+                        display: none;
+                    }
+                }
+            
+                & p {
+                    color: white;
+                    font-size: 0.875em;
+                    line-height: 1.25;
+                    margin: 0px 0px;
+                }
+            }
+            & .slide {
+                width: 100%;
+                height: 900px;
+                position: absolute;
+                top: 0;
+                left: 100%;
+                z-index: 10;
+            }
+            & .slide-1 {
+                background-image: url('../img/purple-shade.png'), url('../img/what-bg.jpg');
+                background-position: top left, top center;
+                background-repeat: no-repeat, no-repeat;
+                background-size: 50% 100%, cover;
+            }
+            & .slide-2 {
+                background-image: url('../img/purple-shade.png'), url('../img/services-bg.jpg');
+                background-position: top left, top center;
+                background-repeat: no-repeat, no-repeat;
+                background-size: 50% 100%, cover;
+            }
+            & .slide-3 {
+                background-image: url('../img/purple-shade.png'), url('../img/lifestyle-bg.jpg');
+                background-position: top left, top center;
+                background-repeat: no-repeat, no-repeat;
+                background-size: 50% 100%, cover;
+            }
+            & .slide-4 {
+                background-image: url('../img/purple-shade.png'), url('../img/coaching-bg.jpg');
+                background-position: top left, top center;
+                background-repeat: no-repeat, no-repeat;
+                background-size: 50% 100%, cover;
+            }
+            & [id^="slide"]:checked + .slide {
+                left: 0;
+                z-index: 100;
+            }
+            & section {
+                & .intro {
+                    height: auto;
+                    width: 50%;
+                    grid-column: 1/7;
+                    display: flex;
+                    justify-content: center;
+                    align-items: flex-start;
+                
+                    & p {
+                        font-size: 0.875em;
+                    }
+
+                    & a.button {
+                        margin-top: 16px;
+                    }
+                }
+            }
         }
 
         &.retirement {
@@ -91,6 +215,75 @@
 
             & h1 {
                 color: $lightblue;
+            }
+        }
+
+        &.who {
+            background-image: url('../img/purple-shade.png'), url('../img/who-bg.jpg');
+            background-position: top left, top center;
+            background-repeat: no-repeat, no-repeat;
+            background-size: 50% 100%, cover;
+            height: calc(100% - 256px);
+
+            & h1 {
+                color: $lightblue;
+            }
+
+            & .intro {
+                display: flex;
+                flex-direction: column;
+                flex-wrap: wrap;
+                justify-content: flex-end;
+                align-items: flex-start;
+
+                & p {
+                    color: white;
+                }
+            }
+
+            & .leadership-team {
+                grid-column: 1/13;
+                padding: 0px 64px;
+                display: grid;
+                grid-template-columns: repeat(12, 1fr);
+                grid-column-gap: 1.5em;
+                margin-top: 128px;
+
+                & .team-profile {
+                    grid-column: auto/span 4;
+
+                    & .avatar img {
+                        width: 100%;
+                        height: auto;
+                        border: 4px solid $gold;
+                    }
+
+                    & .profile {
+
+                        & h3 {
+                            font-family: $headline-regular;
+                            font-size: 1.75em;
+                            color: $gold;
+                            text-transform: none;
+                            margin: 1em 0px 0.5em;
+
+                            &::after {
+                                display: none;
+                            }
+                        }
+                        & h4 {
+                            @include primary-font(400);
+                            color: $purple;
+                            font-size: 1.125em;
+                            text-transform: uppercase;
+                        }
+                        & p {
+                            & a {
+                                color: $purple;
+                            }
+                        }
+                    }
+                }
             }
         }
 
@@ -112,6 +305,7 @@
                 flex-direction: column;
                 flex-wrap: wrap;
                 justify-content: center;
+                align-items: flex-start;
 
                 & p {
                     color: white;
@@ -484,6 +678,103 @@
         }
     }
 
+    &.who {
+        border: none;
+        padding: 64px;
+
+        & .advisers {
+            grid-column: 1/9;
+            display: grid;
+            grid-template-columns: repeat(8, 1fr);
+            grid-gap: 1.5em;
+
+            & .adviser {
+                grid-column: auto/span 4;
+    
+                & h3 {
+                    text-transform: none;
+                    font-family: $headline-regular;
+                    color: $gold;
+                    font-size: 1.3125em;
+                    margin: 1em 0 0.5em;
+    
+                    &::after {
+                        display: none;
+                    }
+                }
+                & h4 {
+                    @include primary-font(300);
+                    text-transform: uppercase;
+                    color: $purple;
+                    font-size: 1.125em;
+                }
+                & p {
+                    margin: 0.5em 0;
+
+                    &:first-of-type {
+                        @include primary-font(300);
+                        font-size: 1em;
+                    }
+                    & a {
+                        font-size: 1em;
+                        color: $purple;
+                    }
+                }
+            }
+        }
+
+        & .advisers-intro {
+            grid-column: 9/13;
+        }
+    }
+
+    &.support {
+        border-top: 4px solid $lightblue;
+        border-color: $lightblue;
+        background: $lightblue-fade;
+        padding: 64px;
+
+        & h3 {
+            grid-column: 1/13;
+            width: 100%;
+        }
+
+        & .support-team {
+            grid-column: auto/span 4;
+            margin-bottom: 1.5em;
+
+            & h3 {
+                text-transform: none;
+                font-family: $headline-regular;
+                color: $gold;
+                font-size: 1.3125em;
+                margin: 1em 0 0.5em;
+
+                &::after {
+                    display: none;
+                }
+            }
+            & h4 {
+                @include primary-font(300);
+                text-transform: uppercase;
+                color: $purple;
+                font-size: 1.125em;
+            }
+            & p {
+                margin: 0.5em 0;
+
+                &:first-of-type {
+                    @include primary-font(300);
+                    font-size: 1em;
+                }
+                & a {
+                    font-size: 1em;
+                    color: $purple;
+                }
+            }
+        }
+    }
+
     &.lightgold {
         background: $lightgold-fade;
     }
@@ -495,13 +786,6 @@
 .contact-intro {
     grid-column: 1/6;
     padding: 96px 64px;
-
-    & a.tel {
-        color: $orange;
-        text-decoration: none;
-        font-size: 2em;
-        margin: 1em 0;
-    }
 }
 
 // Fees Page
@@ -512,6 +796,47 @@
 .fees-documents {
     grid-column: 9/13; 
     padding: 64px 64px 64px 0px;
+
+    & .document {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+
+        &::before {
+            content: '';
+            background: url('../img/pdf.png') no-repeat top left;
+            background-size: contain;
+            width: 31px;
+            height: 41px;
+            margin-top: 16px;
+        }
+
+        & h3 {
+            margin-left: 17px;
+
+            &::after {
+                display: none;
+            }
+            & a {
+                @include primary-font(400);
+                color: $purple;
+                text-decoration: none;
+            }
+        }
+        & p {
+            margin: 0px;
+            margin-left: 48px;
+            @include primary-font(300);
+            font-size: 0.875em;
+
+            &::first-of-type {
+                @include primary-font(300);
+                font-size: 0.875em;
+                margin: 0px;
+            }
+        }
+    }
 }
 
 // Awards Section
