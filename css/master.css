@@ -155,6 +155,30 @@ a.button {
 a:hover {
   cursor: pointer; }
 
+input[type="text"], input[type="tel"], input[type="email"], textarea {
+  background: white;
+  border: 1px solid #C3EDFF;
+  border-radius: 4px;
+  padding: 18px 22px;
+  width: 100%;
+  margin-bottom: 16px;
+  font-size: 1em;
+  font-weight: 300; }
+
+input[type="submit"] {
+  background: #F5A623;
+  color: white;
+  padding: 20px 64px;
+  border-radius: 4px;
+  text-transform: uppercase;
+  border: none;
+  -webkit-appearance: none;
+  min-width: 200px;
+  text-align: center;
+  margin-left: calc(100% - 200px); }
+  input[type="submit"]:hover {
+    cursor: pointer; }
+
 .home__container {
   display: grid;
   grid-column-gap: 1.5em;
@@ -316,6 +340,10 @@ nav {
       .service__container header.what .intro p {
         font-size: 1.125em;
         color: white; }
+    .service__container header.what input[type="radio"] {
+      position: inherit;
+      top: -1000px;
+      visibility: hidden; }
     .service__container header.what .slide-nav {
       grid-column: 1/13;
       grid-row: 3;
@@ -410,8 +438,35 @@ nav {
         font-size: 0.875em; }
       .service__container header.what section .intro a.button {
         margin-top: 16px; }
+  .service__container header.tax {
+    background-image: url("../img/purple-shade.png"), url("../img/tax-bg.jpg");
+    background-position: top left, top center;
+    background-repeat: no-repeat, no-repeat;
+    background-size: 50% 100%, cover; }
+  .service__container header.mortgage {
+    background-image: url("../img/purple-shade.png"), url("../img/mortgage-bg.jpg");
+    background-position: top left, top center;
+    background-repeat: no-repeat, no-repeat;
+    background-size: 50% 100%, cover; }
   .service__container header.retirement {
     background-image: url("../img/purple-shade.png"), url("../img/retirement-bg.jpg");
+    background-position: top left, top center;
+    background-repeat: no-repeat, no-repeat;
+    background-size: 50% 100%, cover; }
+  .service__container header.estate {
+    background-image: url("../img/purple-shade.png"), url("../img/estate-bg.jpg");
+    background-position: top left, top center;
+    background-repeat: no-repeat, no-repeat;
+    background-size: 50% 100%, cover; }
+  .service__container header.insurance {
+    background-image: url("../img/gold-shade.png"), url("../img/insurance-bg.jpg");
+    background-position: top left, top center;
+    background-repeat: no-repeat, no-repeat;
+    background-size: 50% 100%, cover; }
+    .service__container header.insurance .intro h1 {
+      color: #C3EDFF; }
+  .service__container header.sme {
+    background-image: url("../img/purple-shade.png"), url("../img/sme-bg.jpg");
     background-position: top left, top center;
     background-repeat: no-repeat, no-repeat;
     background-size: 50% 100%, cover; }
@@ -466,8 +521,26 @@ nav {
           color: #094970;
           font-size: 1.125em;
           text-transform: uppercase; }
-        .service__container header.who .leadership-team .team-profile .profile p a {
-          color: #094970; }
+        .service__container header.who .leadership-team .team-profile .profile .profile__contact {
+          display: flex;
+          flex-direction: row;
+          flex-wrap: wrap;
+          margin-top: 8px; }
+          .service__container header.who .leadership-team .team-profile .profile .profile__contact--details {
+            flex: 4; }
+            .service__container header.who .leadership-team .team-profile .profile .profile__contact--details p {
+              margin: 8px 0px 0px; }
+              .service__container header.who .leadership-team .team-profile .profile .profile__contact--details p a {
+                color: #094970; }
+              .service__container header.who .leadership-team .team-profile .profile .profile__contact--details p:last-of-type a {
+                text-decoration: none; }
+          .service__container header.who .leadership-team .team-profile .profile .profile__contact--linkedin {
+            flex: 1;
+            align-self: flex-end; }
+            .service__container header.who .leadership-team .team-profile .profile .profile__contact--linkedin img {
+              opacity: 0; }
+          .service__container header.who .leadership-team .team-profile .profile .profile__contact:hover > .profile__contact--linkedin img {
+            opacity: 1; }
   .service__container header.contact {
     background-image: url("../img/purple-shade.png"), url("../img/contact-bg.jpg");
     background-position: top left, top center;
@@ -713,7 +786,67 @@ nav {
   .row .how-process {
     grid-column: 1/10;
     align-self: center;
-    padding: 96px 64px; }
+    padding: 96px 64px 32px; }
+  .row .how-process-map {
+    grid-column: 2/12;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 32px 0px 64px; }
+    .row .how-process-map .map-item {
+      width: 33.333333333%;
+      padding: 24px 16px 32px;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: flex-start; }
+      .row .how-process-map .map-item:nth-child(1) {
+        border: 8px solid transparent;
+        border-image: url("../img/map-1.png") 10 round; }
+      .row .how-process-map .map-item:nth-child(2) {
+        border: 8px solid transparent;
+        border-image: url("../img/map-2.png") 10 round; }
+      .row .how-process-map .map-item:nth-child(3) {
+        border: 8px solid transparent;
+        border-image: url("../img/map-3.png") 10 round; }
+      .row .how-process-map .map-item:nth-child(4) {
+        border: 8px solid transparent;
+        border-image: url("../img/map-4.png") 10 stretch;
+        border-right: none; }
+      .row .how-process-map .map-item:nth-child(7) {
+        border: 8px solid transparent;
+        border-image: url("../img/map-7.png") 10 round; }
+      .row .how-process-map .map-item:nth-child(8) {
+        border: 8px solid transparent;
+        border-image: url("../img/map-8.png") 10 round; }
+      .row .how-process-map .map-item:nth-child(9) {
+        border: 8px solid transparent;
+        border-image: url("../img/map-9.png") 10 round; }
+      .row .how-process-map .map-item .item-number {
+        font-family: "aleoregular", Arial, sans-serif;
+        font-size: 3em;
+        color: #BD9F67;
+        flex: 1;
+        text-align: right;
+        margin-right: 16px; }
+      .row .how-process-map .map-item .item-description {
+        font-family: 'Roboto', Arial, sans-serif;
+        font-style: normal;
+        font-weight: 300;
+        flex: 4; }
+        .row .how-process-map .map-item .item-description h3 {
+          font-weight: 400;
+          font-size: 1.125em;
+          text-transform: uppercase;
+          color: #094970; }
+          .row .how-process-map .map-item .item-description h3::after {
+            display: none; }
+        .row .how-process-map .map-item .item-description p {
+          font-family: 'Roboto', Arial, sans-serif;
+          font-style: normal;
+          font-weight: 300;
+          font-size: 0.875em;
+          color: #094970; }
   .row .how-charging {
     grid-column: 2/7;
     padding: 96px 64px;
@@ -766,20 +899,36 @@ nav {
         .row.who .advisers .adviser h4 {
           font-family: 'Roboto', Arial, sans-serif;
           font-style: normal;
-          font-weight: 300;
+          font-weight: 400;
           text-transform: uppercase;
           color: #094970;
-          font-size: 1.125em; }
-        .row.who .advisers .adviser p {
-          margin: 0.5em 0; }
-          .row.who .advisers .adviser p:first-of-type {
-            font-family: 'Roboto', Arial, sans-serif;
-            font-style: normal;
-            font-weight: 300;
-            font-size: 1em; }
-          .row.who .advisers .adviser p a {
-            font-size: 1em;
-            color: #094970; }
+          font-size: 1em; }
+        .row.who .advisers .adviser .adviser__contact {
+          display: flex;
+          flex-direction: row;
+          flex-wrap: wrap;
+          margin-top: 8px; }
+          .row.who .advisers .adviser .adviser__contact:hover > .adviser__contact--linkedin img {
+            opacity: 1; }
+          .row.who .advisers .adviser .adviser__contact--details {
+            flex: 4; }
+            .row.who .advisers .adviser .adviser__contact--details p {
+              margin: 0.25em 0; }
+              .row.who .advisers .adviser .adviser__contact--details p:first-of-type {
+                font-family: 'Roboto', Arial, sans-serif;
+                font-style: normal;
+                font-weight: 300;
+                font-size: 1em; }
+              .row.who .advisers .adviser .adviser__contact--details p a {
+                font-size: 1em;
+                color: #094970; }
+              .row.who .advisers .adviser .adviser__contact--details p:last-of-type a {
+                text-decoration: none; }
+          .row.who .advisers .adviser .adviser__contact--linkedin {
+            flex: 1;
+            align-self: flex-end; }
+            .row.who .advisers .adviser .adviser__contact--linkedin img {
+              opacity: 0; }
     .row.who .advisers-intro {
       grid-column: 9/13; }
   .row.support {
@@ -804,20 +953,36 @@ nav {
       .row.support .support-team h4 {
         font-family: 'Roboto', Arial, sans-serif;
         font-style: normal;
-        font-weight: 300;
+        font-weight: 400;
         text-transform: uppercase;
         color: #094970;
         font-size: 1.125em; }
-      .row.support .support-team p {
-        margin: 0.5em 0; }
-        .row.support .support-team p:first-of-type {
-          font-family: 'Roboto', Arial, sans-serif;
-          font-style: normal;
-          font-weight: 300;
-          font-size: 1em; }
-        .row.support .support-team p a {
-          font-size: 1em;
-          color: #094970; }
+      .row.support .support-team .support__contact {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin-top: 8px; }
+        .row.support .support-team .support__contact:hover > .support__contact--linkedin img {
+          opacity: 1; }
+        .row.support .support-team .support__contact--details {
+          flex: 4; }
+          .row.support .support-team .support__contact--details p {
+            margin: 0.25em 0; }
+            .row.support .support-team .support__contact--details p:first-of-type {
+              font-family: 'Roboto', Arial, sans-serif;
+              font-style: normal;
+              font-weight: 300;
+              font-size: 1em; }
+            .row.support .support-team .support__contact--details p a {
+              font-size: 1em;
+              color: #094970; }
+            .row.support .support-team .support__contact--details p:last-of-type a {
+              text-decoration: none; }
+        .row.support .support-team .support__contact--linkedin {
+          flex: 1;
+          align-self: flex-end; }
+          .row.support .support-team .support__contact--linkedin img {
+            opacity: 0; }
   .row.lightgold {
     background: rgba(189, 159, 103, 0.1); }
   .row.lightblue {
@@ -920,6 +1085,99 @@ nav {
       display: block;
       width: 100%;
       height: auto; }
+
+.modal input[type="checkbox"] {
+  position: inherit;
+  top: -1000px;
+  visibility: hidden; }
+.modal label {
+  background-image: linear-gradient(-90deg, #F2CA46 0%, #F5A623 85%);
+  height: auto;
+  width: 100%;
+  min-width: 310px;
+  padding: 20px 32px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  font-family: 'Roboto', Arial, sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  margin: 0px 0px 0px;
+  text-transform: uppercase;
+  text-decoration: none; }
+  .modal label strong {
+    font-weight: 700; }
+  .modal label:hover {
+    cursor: pointer; }
+  .modal label:hover > img {
+    animation: arrow 1s linear infinite; }
+.modal input[type="checkbox"]:checked ~ .modal__overlay {
+  opacity: 1;
+  transform: scale(1);
+  z-index: 4000;
+  height: 100%;
+  position: fixed;
+  overflow: hidden; }
+.modal .modal__overlay {
+  background: #094970;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  position: absolute;
+  text-align: left;
+  opacity: 0;
+  z-index: -100;
+  transform: scale(0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .modal .modal__overlay .modal__wrap {
+    padding: 64px;
+    border: 4px solid #BD9F67;
+    position: relative;
+    margin: 0 auto;
+    width: 75%;
+    background: white;
+    display: flex; }
+    .modal .modal__overlay .modal__wrap .modal__close {
+      padding: 8px;
+      background: #BD9F67;
+      position: relative;
+      max-width: 32px;
+      min-width: 32px;
+      max-height: 32px;
+      top: -64px;
+      left: -64px;
+      color: white; }
+      .modal .modal__overlay .modal__wrap .modal__close:hover {
+        cursor: pointer; }
+      .modal .modal__overlay .modal__wrap .modal__close:hover > img {
+        animation: none !important; }
+      .modal .modal__overlay .modal__wrap .modal__close img {
+        height: 16px;
+        width: 16px; }
+    .modal .modal__overlay .modal__wrap .modal__copy {
+      width: 37.5%; }
+      .modal .modal__overlay .modal__wrap .modal__copy a.tel {
+        font-size: 1.5em; }
+      .modal .modal__overlay .modal__wrap .modal__copy p {
+        color: black;
+        font-size: 0.875em; }
+      .modal .modal__overlay .modal__wrap .modal__copy p:first-of-type {
+        font-family: "aleoregular", Arial, sans-serif;
+        font-size: 1.75em;
+        line-height: 1.25; }
+    .modal .modal__overlay .modal__wrap .modal__form {
+      width: calc(62.5% - 32px);
+      margin-left: 32px;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: nowrap; }
 
 footer {
   display: grid;

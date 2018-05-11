@@ -34,6 +34,15 @@ $gold: #BD9F67;
 $lightblue: #C3EDFF;
 $orange: #F5A623;
 
+$border-hippie-blue: #449EA0;
+$border-river-bed: #465660;
+$border-william: #366264;
+$border-regent-gray: #7A939F;
+$border-bondi-blue: #00AEB1;
+$border-minsk: #3C2E7F;
+$border-tarawera: #093E60;
+
+
 $purple-fade: rgba(9,62,96,0.9);
 $lightgold-fade: rgba(189,159,103,0.1);
 $lightblue-fade: rgba(195,237,255,0.2);
@@ -45,9 +54,9 @@ $lightblue-fade: rgba(195,237,255,0.2);
     font-weight: $weight;
 }
 @mixin input-placeholder {
-    &.placeholder { @content; }
-    &:-moz-placeholder { @content; }
-    &::-moz-placeholder { @content; }
-    &:-ms-input-placeholder { @content; }
-    &::-webkit-input-placeholder { @content; }
+    &.placeholder { @content; text-transform: uppercase; }
+    &:-moz-placeholder { @content; text-transform: uppercase; }
+    &::-moz-placeholder { @content; text-transform: uppercase; }
+    &:-ms-input-placeholder { @content; text-transform: uppercase; }
+    &::-webkit-input-placeholder { @content; text-transform: uppercase; }
 }

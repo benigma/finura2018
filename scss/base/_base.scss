@@ -150,3 +150,30 @@ a.button {
 a:hover {
     cursor: pointer;
 }
+
+input[type="text"], input[type="tel"], input[type="email"], textarea {
+    background: white;
+    border: 1px solid $lightblue;
+    border-radius: 4px;
+    padding: 18px 22px;
+    width: 100%;
+    margin-bottom: 16px;
+    font-size: 1em;
+    font-weight: 300;
+}
+input[type="submit"] {
+    background: $orange;
+    color: white;
+    padding: 20px 64px;
+    border-radius: 4px;
+    text-transform: uppercase;
+    border: none;
+    -webkit-appearance: none;
+    min-width: 200px;
+    text-align: center;
+    margin-left: calc(100% - 200px);
+
+    &:hover {
+        cursor: pointer;
+    }
+}
