@@ -114,13 +114,19 @@ a.button {
     margin: 48px 0px 0px;
     text-transform: uppercase;
     text-decoration: none;
+    box-shadow: 2px 2px 4px rgba(0,0,0,0.25);
+    border-radius: 4px;
 
     & strong {
         @include primary-font(700);
     }
 
+    // &.orange {
+    //     background-image: linear-gradient(-90deg, #F2CA46 0%, #F5A623 85%);
+    // }
     &.orange {
-        background-image: linear-gradient(-90deg, #F2CA46 0%, #F5A623 85%);
+        background-image: linear-gradient(-90deg, #C3EDFF 1%, #98DCFA 82%);
+        color: $purple;
     }
     &.green {
         background-image: linear-gradient(-90deg, #669F8C 0%, #568273 85%);
@@ -162,8 +168,9 @@ input[type="text"], input[type="tel"], input[type="email"], textarea {
     font-weight: 300;
 }
 input[type="submit"] {
-    background: $orange;
+    background: $purple;
     color: white;
+    font-size: 1em;
     padding: 20px 64px;
     border-radius: 4px;
     text-transform: uppercase;
@@ -171,9 +178,12 @@ input[type="submit"] {
     -webkit-appearance: none;
     min-width: 200px;
     text-align: center;
-    margin-left: calc(100% - 200px);
+    margin-left: calc(100% - 226px);
+    transition: all 0.5s ease-in-out;
 
     &:hover {
         cursor: pointer;
+        background: $lightblue;
+        color: $purple;
     }
 }

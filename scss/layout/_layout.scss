@@ -19,7 +19,14 @@
         grid-template-columns: repeat(12, 1fr);
         grid-template-rows: auto;
         grid-gap: 1.5em;
+        padding-bottom: 32px;
         height: 100%;
+
+        & .scroll {
+            grid-row: 2;
+            grid-column: 1/13;
+            text-align: center;
+        }
 
         & .intro {
             height: auto;
@@ -27,21 +34,23 @@
             display: flex;
             align-items: center;
             padding: 0 4em;
-            min-height: 640px;
+            height: 100%;
+            min-height: 600px;
         }
     
         &.why {
-            background-image: url('../img/purple-shade.png'), url('../img/why-bg.jpg');
-            background-position: top left, top center;
-            background-repeat: no-repeat, no-repeat;
-            background-size: 50% 100%, cover;
+            background-image: url('../img/01.png'), url('../img/purple-shade.png'), url('../img/why-bg.jpg');
+            background-position: left center, top left, top center;
+            background-repeat: no-repeat, no-repeat, no-repeat;
+            background-size: 25%, 50% 100%, cover;
+            min-height: 900px;
         }
 
         &.what {
-            background-image: url('../img/purple-shade.png'), url('../img/what-bg.jpg');
-            background-position: top left, top center;
-            background-repeat: no-repeat, no-repeat;
-            background-size: 50% 100%, cover;
+            background-image: url('../img/02.png'), url('../img/purple-shade.png'), url('../img/what-bg.jpg');
+            background-position: left center, top left, top center;
+            background-repeat: no-repeat, no-repeat, no-repeat;
+            background-size: 25%, 50% 100%, cover;
             min-height: 900px;
 
             & .intro {
@@ -49,7 +58,7 @@
                 flex-direction: column;
                 flex-wrap: wrap;
                 align-items: flex-start;
-                padding: 12em 4em 4em;
+                padding: 12em 4em 0;
 
                 & h1 {
                     font-size: 1.5em;
@@ -91,7 +100,7 @@
                 justify-content: space-between;
                 z-index: 900;
                 width: 100%;
-                padding: 0px 64px 64px;
+                padding: 0px 64px 32px;
             
                 & label {
                     cursor: pointer;
@@ -160,28 +169,28 @@
                 //transition: left 0 0.75s;
             }
             & .slide-1 {
-                background-image: url('../img/purple-shade.png'), url('../img/what-bg.jpg');
-                background-position: top left, top center;
-                background-repeat: no-repeat, no-repeat;
-                background-size: 50% 100%, cover;
+                background-image: url('../img/02.png'), url('../img/purple-shade.png'), url('../img/what-bg.jpg');
+                background-position: left center, top left, top center;
+                background-repeat: no-repeat, no-repeat, no-repeat;
+                background-size: 25%, 50% 100%, cover;
             }
             & .slide-2 {
-                background-image: url('../img/purple-shade.png'), url('../img/services-bg.jpg');
-                background-position: top left, top center;
-                background-repeat: no-repeat, no-repeat;
-                background-size: 50% 100%, cover;
+                background-image: url('../img/02.png'), url('../img/purple-shade.png'), url('../img/services-bg.jpg');
+                background-position: left center, top left, top center;
+                background-repeat: no-repeat, no-repeat, no-repeat;
+                background-size: 25%, 50% 100%, cover;
             }
             & .slide-3 {
-                background-image: url('../img/purple-shade.png'), url('../img/lifestyle-bg.jpg');
-                background-position: top left, top center;
-                background-repeat: no-repeat, no-repeat;
-                background-size: 50% 100%, cover;
+                background-image: url('../img/02.png'), url('../img/purple-shade.png'), url('../img/lifestyle-bg.jpg');
+                background-position: left center, top left, top center;
+                background-repeat: no-repeat, no-repeat, no-repeat;
+                background-size: 25%, 50% 100%, cover;
             }
             & .slide-4 {
-                background-image: url('../img/purple-shade.png'), url('../img/coaching-bg.jpg');
-                background-position: top left, top center;
-                background-repeat: no-repeat, no-repeat;
-                background-size: 50% 100%, cover;
+                background-image: url('../img/02.png'), url('../img/purple-shade.png'), url('../img/coaching-bg.jpg');
+                background-position: left center, top left, top center;
+                background-repeat: no-repeat, no-repeat, no-repeat;
+                background-size: 25%, 50% 100%, cover;
             }
             & [id^="slide"]:checked + .slide {
                 left: 0;
@@ -253,10 +262,11 @@
         }
 
         &.how {
-            background-image: url('../img/gold-shade.png'), url('../img/how-bg.jpg');
-            background-position: top left, top center;
-            background-repeat: no-repeat, no-repeat;
-            background-size: 50% 100%, cover;
+            background-image: url('../img/03.png'), url('../img/gold-shade.png'), url('../img/how-bg.jpg');
+            background-position: left center, top left, top center;
+            background-repeat: no-repeat, no-repeat, no-repeat;
+            background-size: 25%, 50% 100%, cover;
+            min-height: 900px;
 
             & h1 {
                 color: $lightblue;
@@ -456,7 +466,7 @@
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: space-between;
-    padding: 0px 64px 64px;
+    padding: 0px 64px;
 
     & .page__introduction--item {
         width: auto;
@@ -585,6 +595,104 @@
         padding: 96px 64px;
         align-self: center;
     }
+
+    //New Services Section
+    & .what-services-new {
+        grid-column: 1/13;
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: 1;
+        background: url('../img/services-list-bg.jpg') no-repeat center;
+        background-size: cover;
+
+        & .services__intro {
+            grid-column: 8/13;
+            grid-row: 1;
+            padding: 64px 64px 64px 128px;
+            background: url('../img/services-intro-bg.png') no-repeat center;
+            background-size: cover; 
+
+            & p {
+                color: white;
+                font-size: 1em;
+
+                &:first-of-type {
+                    font-size: 1.5em;
+                }
+            }
+        }
+
+        & .services__list {
+            grid-column: 1/8;
+            grid-row: 1;
+            padding: 64px;
+            margin: 64px -64px 64px 32px;
+            background: white;
+
+            display: flex;
+            flex-wrap: wrap;
+
+            &--item {
+                width: 50%;
+                padding: 0 32px 0 0;
+                margin-top: 32px;
+
+                &:nth-child(even) {
+                    padding: 0 0 0 32px;
+                }
+                &:nth-child(1), &:nth-child(2) {
+                    margin-top: 0px;
+                }
+
+                & h3 {
+                    & a {
+                        color: $gold;
+                        text-decoration: none;
+                        transition: all 0.25s ease-in-out;
+
+                        &:hover {
+                            color: $purple;
+                        }
+                    }
+                    &:after {
+                        transition: width 0.3s ease-in;
+                    }
+                    &:hover {
+                        &::after {
+                            width: 64px;
+                        }
+                    }
+                }
+
+                & p {
+                    font-size: 0.875em;
+
+                    &:first-of-type {
+                        font-size: 0.875em;
+                        @include primary-font(300);
+                    }
+
+                    &:last-of-type {
+                        text-align: right;
+                    }
+
+                    & a {
+                        text-transform: uppercase;
+                        text-decoration: none;
+                        color: $purple;
+                        font-weight: 400;
+                        color: $purple;
+                        margin-right: 8px;
+
+                        &:hover {
+                            text-decoration: underline;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
     & .what-services {
         grid-column: 1/13;
         padding: 64px;
@@ -612,26 +720,44 @@
             justify-content: space-between;
             min-height: 350px;
 
+            // &.orange {
+            //     background-image: linear-gradient(-90deg, #F2CA46 0%, #F5A623 85%);
+            // }
             &.orange {
-                background-image: linear-gradient(-90deg, #F2CA46 0%, #F5A623 85%);
+                background-image: linear-gradient(-90deg, #C3EDFF 1%, #98DCFA 82%);
+                border-radius: 4px;
+                color: $purple;
+                box-shadow: 2px 2px 4px rgba(0,0,0,0.25);
             }
             &.green {
                 background-image: linear-gradient(-90deg, #669F8C 0%, #568273 85%);
+                border-radius: 4px;
+                box-shadow: 2px 2px 4px rgba(0,0,0,0.25);
             }
             &.purple {
                 background-image: linear-gradient(-90deg, #055F96 0%, #094970 85%);
+                border-radius: 4px;
+                box-shadow: 2px 2px 4px rgba(0,0,0,0.25);
             }
             &.gold {
                 background-image: linear-gradient(-90deg, #D0B47D 0%, #BFA064 85%);
+                border-radius: 4px;
+                box-shadow: 2px 2px 4px rgba(0,0,0,0.25);
             }
             &.fountain-blue {
                 background-image: linear-gradient(-90deg, #4EADB3 23%, #42969C 85%);
+                border-radius: 4px;
+                box-shadow: 2px 2px 4px rgba(0,0,0,0.25);
             }
             &.jellybean {
                 background-image: linear-gradient(-90deg, #3581AF 0%, #2B6D95 85%);
+                border-radius: 4px;
+                box-shadow: 2px 2px 4px rgba(0,0,0,0.25);
             }
             &.blue-bayoux {
                 background-image: linear-gradient(-90deg, #66808D 0%, #4B626D 85%);
+                border-radius: 4px;
+                box-shadow: 2px 2px 4px rgba(0,0,0,0.25);
             }
 
             & .service-content {
@@ -996,6 +1122,10 @@
     grid-column: 1/6;
     padding: 96px 64px;
 }
+.contact__form {
+    grid-column: 7/12;
+    padding: 128px 0px 64px;
+}
 
 // Fees Page
 .fees-section {
@@ -1145,6 +1275,8 @@
         margin: 0px 0px 0px;
         text-transform: uppercase;
         text-decoration: none;
+        border-radius: 4px;
+        box-shadow: 2px 2px 4px rgba(0,0,0,0.25);
 
         & strong {
             font-weight: 700;
@@ -1276,7 +1408,7 @@ footer {
         padding-right: 64px;
 
         & a {
-            color: $orange;
+            color: $lightblue;
             font-size: 1.5em;
             text-decoration: none;
         }
