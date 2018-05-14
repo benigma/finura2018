@@ -71,7 +71,7 @@ table {
 
 h1 {
   font-family: "aleolight", Arial, sans-serif;
-  font-size: 3em;
+  font-size: 2.75em;
   color: #BD9F67;
   text-transform: uppercase;
   line-height: 1.1875; }
@@ -112,7 +112,7 @@ a.tel {
   color: #094970;
   text-decoration: none;
   font-size: 2em;
-  margin: 1em 0; }
+  line-height: 2; }
 
 a.button {
   height: auto;
@@ -238,7 +238,11 @@ nav {
   z-index: 2000;
   overflow: hidden;
   right: -100%;
-  position: fixed; }
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-between; }
   #navigation__container.selected {
     width: 370px;
     right: 0%;
@@ -265,7 +269,7 @@ nav {
   #navigation__container ul li {
     border-bottom: 1px solid #C3EDFF;
     text-align: right;
-    font-size: 1.5em;
+    font-size: 1.3125em;
     display: block;
     background: transparent; }
     #navigation__container ul li a {
@@ -277,7 +281,7 @@ nav {
       text-decoration: none;
       transition: background 0.25s ease-in-out, color 0.3s ease-in;
       display: block;
-      padding: 20px 64px; }
+      padding: 20px 32px; }
       #navigation__container ul li a:hover {
         color: #BD9F67;
         background: rgba(195, 237, 255, 0.2);
@@ -287,10 +291,10 @@ nav {
     font-family: 'Roboto', Arial, sans-serif;
     font-style: normal;
     font-weight: 400;
-    padding: 64px;
+    padding: 32px;
     text-align: right; }
     #navigation__container .phone a {
-      color: #094970;
+      color: #C3EDFF;
       text-decoration: none; }
 
 .home__container header {
@@ -310,44 +314,42 @@ nav {
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: auto;
   grid-gap: 1.5em;
-  padding-bottom: 32px;
+  padding: 96px 0 32px;
   height: 100%; }
   .service__container header .scroll {
     grid-row: 2;
     grid-column: 1/13;
-    text-align: center; }
+    text-align: center;
+    animation: scroll 1.5s ease-in-out infinite;
+    animation-delay: 2s;
+    opacity: 0; }
   .service__container header .intro {
     height: auto;
     grid-column: 1/7;
     display: flex;
     align-items: center;
-    padding: 0 4em;
-    height: 100%;
-    min-height: 600px; }
+    padding: 4em;
+    height: 100%; }
   .service__container header.why {
     background-image: url("../img/01.png"), url("../img/purple-shade.png"), url("../img/why-bg.jpg");
     background-position: left center, top left, top center;
     background-repeat: no-repeat, no-repeat, no-repeat;
-    background-size: 25%, 50% 100%, cover;
-    min-height: 900px; }
+    background-size: 25%, 50% 100%, cover; }
   .service__container header.what {
     background-image: url("../img/02.png"), url("../img/purple-shade.png"), url("../img/what-bg.jpg");
     background-position: left center, top left, top center;
     background-repeat: no-repeat, no-repeat, no-repeat;
-    background-size: 25%, 50% 100%, cover;
-    min-height: 900px; }
+    background-size: 25%, 50% 100%, cover; }
     .service__container header.what .intro {
       display: flex;
       flex-direction: column;
       flex-wrap: wrap;
       align-items: flex-start;
-      padding: 12em 4em 0; }
+      padding: 96px 64px 0; }
       .service__container header.what .intro h1 {
-        font-size: 1.5em;
         color: #C3EDFF; }
         .service__container header.what .intro h1 strong {
-          color: white;
-          font-size: 1.75em; }
+          color: white; }
       .service__container header.what .intro h3 {
         padding-bottom: 24px; }
         .service__container header.what .intro h3::after {
@@ -489,16 +491,15 @@ nav {
     background-image: url("../img/03.png"), url("../img/gold-shade.png"), url("../img/how-bg.jpg");
     background-position: left center, top left, top center;
     background-repeat: no-repeat, no-repeat, no-repeat;
-    background-size: 25%, 50% 100%, cover;
-    min-height: 900px; }
+    background-size: 25%, 50% 100%, cover; }
     .service__container header.how h1 {
       color: #C3EDFF; }
   .service__container header.who {
-    background-image: url("../img/purple-shade.png"), url("../img/who-bg.jpg");
-    background-position: top left, top center;
-    background-repeat: no-repeat, no-repeat;
-    background-size: 50% 100%, cover;
-    height: calc(100% - 256px); }
+    background-image: url("../img/04.png"), url("../img/purple-shade.png"), url("../img/who-bg.jpg");
+    background-position: left center, top left, top center;
+    background-repeat: no-repeat, no-repeat, no-repeat;
+    background-size: 25%, 50% 100%, cover;
+    height: 100%; }
     .service__container header.who h1 {
       color: #C3EDFF; }
     .service__container header.who .intro {
@@ -506,57 +507,17 @@ nav {
       flex-direction: column;
       flex-wrap: wrap;
       justify-content: flex-end;
-      align-items: flex-start; }
+      align-items: flex-start;
+      padding-bottom: 32px; }
       .service__container header.who .intro p {
         color: white; }
-    .service__container header.who .leadership-team {
-      grid-column: 1/13;
-      padding: 0px 64px;
-      display: grid;
-      grid-template-columns: repeat(12, 1fr);
-      grid-column-gap: 1.5em;
-      margin-top: 128px; }
-      .service__container header.who .leadership-team .team-profile {
-        grid-column: auto/span 4; }
-        .service__container header.who .leadership-team .team-profile .avatar img {
-          width: 100%;
-          height: auto;
-          border: 4px solid #BD9F67; }
-        .service__container header.who .leadership-team .team-profile .profile h3 {
-          font-family: "aleoregular", Arial, sans-serif;
-          font-size: 1.75em;
-          color: #BD9F67;
-          text-transform: none;
-          margin: 1em 0px 0.5em; }
-          .service__container header.who .leadership-team .team-profile .profile h3::after {
-            display: none; }
-        .service__container header.who .leadership-team .team-profile .profile h4 {
-          font-family: 'Roboto', Arial, sans-serif;
-          font-style: normal;
-          font-weight: 400;
-          color: #094970;
-          font-size: 1.125em;
-          text-transform: uppercase; }
-        .service__container header.who .leadership-team .team-profile .profile .profile__contact {
-          display: flex;
-          flex-direction: row;
-          flex-wrap: wrap;
-          margin-top: 8px; }
-          .service__container header.who .leadership-team .team-profile .profile .profile__contact--details {
-            flex: 4; }
-            .service__container header.who .leadership-team .team-profile .profile .profile__contact--details p {
-              margin: 8px 0px 0px; }
-              .service__container header.who .leadership-team .team-profile .profile .profile__contact--details p a {
-                color: #094970; }
-              .service__container header.who .leadership-team .team-profile .profile .profile__contact--details p:last-of-type a {
-                text-decoration: none; }
-          .service__container header.who .leadership-team .team-profile .profile .profile__contact--linkedin {
-            flex: 1;
-            align-self: flex-end; }
-            .service__container header.who .leadership-team .team-profile .profile .profile__contact--linkedin img {
-              opacity: 0; }
-          .service__container header.who .leadership-team .team-profile .profile .profile__contact:hover > .profile__contact--linkedin img {
-            opacity: 1; }
+  .service__container header.awards {
+    background-image: url("../img/purple-shade.png"), url("../img/awards-bg.jpg");
+    background-position: top left, top center;
+    background-repeat: no-repeat, no-repeat;
+    background-size: 50% 100%, cover; }
+    .service__container header.awards h1 {
+      color: #C3EDFF; }
   .service__container header.contact {
     background-image: url("../img/purple-shade.png"), url("../img/contact-bg.jpg");
     background-position: top left, top center;
@@ -578,7 +539,7 @@ nav {
 
 .home__menu {
   grid-row: 1/3;
-  grid-column: 8/12;
+  grid-column: 7/13;
   padding: 64px;
   display: flex;
   flex-direction: column;
@@ -601,9 +562,17 @@ nav {
       line-height: 1.214285714;
       text-transform: uppercase;
       margin: 16px 0px; }
+      .home__menu--item .menu__item--content h3:after {
+        transition: width 0.25s ease-in-out;
+        width: 32px; }
+      .home__menu--item .menu__item--content h3:hover:after {
+        width: 64px; }
     .home__menu--item .menu__item--content a {
       text-decoration: none;
-      color: #BD9F67; }
+      color: #BD9F67;
+      transition: color 0.3s ease-in-out; }
+      .home__menu--item .menu__item--content a:hover {
+        color: #C3EDFF; }
     .home__menu--item .menu__item--content p {
       color: white;
       font-size: 1em;
@@ -680,9 +649,18 @@ nav {
   grid-column: 1/13;
   grid-row: auto;
   border-bottom: 4px solid #BD9F67; }
+  .row.no-border {
+    border: none; }
+  .row.border-top-lb {
+    border: none;
+    border-top: 4px solid #C3EDFF; }
+  .row.border-top-gl {
+    border: none;
+    border-top: 4px solid #BD9F67; }
   .row p:first-of-type {
     font-family: "aleoregular", Arial, sans-serif;
-    font-size: 2.25em; }
+    font-size: 2.25em;
+    line-height: 1.25; }
   .row .why-intro {
     grid-column: 2/10;
     padding: 96px 64px;
@@ -711,7 +689,12 @@ nav {
       color: white; }
   .row.csr {
     background: url("../img/csr-bg.jpg") no-repeat center;
-    background-size: cover; }
+    background-size: cover;
+    border-bottom: none; }
+  .row.how-work {
+    background: url("../img/how-work-bg.jpg") no-repeat center;
+    background-size: cover;
+    border-bottom: none; }
   .row .what-intro {
     grid-column: 4/12;
     padding: 96px 64px;
@@ -738,16 +721,16 @@ nav {
       grid-column: 1/8;
       grid-row: 1;
       padding: 64px;
-      margin: 64px -64px 64px 32px;
+      margin: 32px -64px 32px 32px;
       background: white;
       display: flex;
       flex-wrap: wrap; }
       .row .what-services-new .services__list--item {
         width: 50%;
-        padding: 0 32px 0 0;
+        padding: 0 16px 0 0;
         margin-top: 32px; }
         .row .what-services-new .services__list--item:nth-child(even) {
-          padding: 0 0 0 32px; }
+          padding: 0 0 0 16px; }
         .row .what-services-new .services__list--item:nth-child(1), .row .what-services-new .services__list--item:nth-child(2) {
           margin-top: 0px; }
         .row .what-services-new .services__list--item h3 a {
@@ -761,21 +744,19 @@ nav {
         .row .what-services-new .services__list--item h3:hover::after {
           width: 64px; }
         .row .what-services-new .services__list--item p {
-          font-size: 0.875em; }
+          font-size: 0.8125em; }
           .row .what-services-new .services__list--item p:first-of-type {
             font-size: 0.875em;
             font-family: 'Roboto', Arial, sans-serif;
             font-style: normal;
             font-weight: 300; }
-          .row .what-services-new .services__list--item p:last-of-type {
-            text-align: right; }
           .row .what-services-new .services__list--item p a {
             text-transform: uppercase;
             text-decoration: none;
             color: #094970;
             font-weight: 400;
             color: #094970;
-            margin-right: 8px; }
+            margin-right: 1em; }
             .row .what-services-new .services__list--item p a:hover {
               text-decoration: underline; }
   .row .what-services {
@@ -846,15 +827,29 @@ nav {
           line-height: 1.3125; }
       .row .what-services-items .service-item a.button {
         width: 100%; }
+  .row.lifestyle {
+    background: url("../img/casestudies-bg.jpg") no-repeat bottom center;
+    background-size: cover;
+    border: none;
+    border-top: 4px solid #C3EDFF;
+    border-bottom: 4px solid #BD9F67; }
+    .row.lifestyle .lifestyle-content {
+      grid-column: 6/13;
+      padding: 96px 64px;
+      align-self: center; }
+      .row.lifestyle .lifestyle-content p {
+        color: white; }
   .row.casestudies {
     background: url("../img/casestudies-bg.jpg") no-repeat bottom center;
-    background-size: cover; }
-  .row .what-casestudies {
-    grid-column: 6/13;
-    padding: 96px 64px;
-    align-self: center; }
-    .row .what-casestudies p {
-      color: white; }
+    background-size: cover;
+    border: none;
+    padding: 32px 0px; }
+    .row.casestudies .what-casestudies {
+      grid-column: 6/13;
+      padding: 96px 64px;
+      align-self: center; }
+      .row.casestudies .what-casestudies p {
+        color: white; }
   .row .service-content {
     grid-column: 6/13;
     padding: 64px; }
@@ -872,6 +867,40 @@ nav {
     .row .service-sidebar a.button {
       width: 100%;
       margin: 16px 0px 0px; }
+    .row .service-sidebar .service__list {
+      margin: 64px 0px 0px; }
+      .row .service-sidebar .service__list ul li {
+        line-height: 1.125;
+        padding: 16px 0px; }
+        .row .service-sidebar .service__list ul li a {
+          text-decoration: none;
+          text-transform: uppercase;
+          color: #3C2E7F;
+          transition: color 0.3s ease-in-out; }
+          .row .service-sidebar .service__list ul li a:hover {
+            color: #BD9F67; }
+  .row .how__work--section {
+    grid-column: 3/9;
+    padding: 96px 64px;
+    border: none; }
+    .row .how__work--section h3 {
+      color: #C3EDFF;
+      font-size: 1.5em; }
+      .row .how__work--section h3 strong {
+        line-break: strict;
+        color: white;
+        font-size: 1.75em; }
+      .row .how__work--section h3::after {
+        display: none; }
+    .row .how__work--section p {
+      color: white;
+      font-size: 1em;
+      line-height: 1.5; }
+      .row .how__work--section p:first-of-type {
+        font-family: 'Roboto', Arial, sans-serif;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 1em; }
   .row .how-onborading {
     grid-column: 4/12;
     align-self: center;
@@ -971,6 +1000,22 @@ nav {
       font-style: normal;
       font-weight: 300;
       font-size: 1em; }
+  .row .how-technology {
+    grid-column: 2/9;
+    padding: 96px 64px;
+    align-self: center; }
+    .row .how-technology h3 {
+      color: #C3EDFF;
+      font-size: 1.5em; }
+      .row .how-technology h3 strong {
+        line-break: strict;
+        color: white;
+        font-size: 1.75em; }
+      .row .how-technology h3::after {
+        display: none; }
+    .row .how-technology p {
+      color: white;
+      line-height: 1.5; }
   .row.who {
     border: none;
     padding: 64px; }
@@ -1024,6 +1069,60 @@ nav {
               opacity: 0; }
     .row.who .advisers-intro {
       grid-column: 9/13; }
+  .row .leadership-team {
+    grid-column: 1/13;
+    padding: 32px 64px;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-column-gap: 1.5em; }
+    .row .leadership-team .team-profile {
+      grid-column: auto/span 4; }
+      .row .leadership-team .team-profile .avatar {
+        display: none; }
+        .row .leadership-team .team-profile .avatar img {
+          width: 100%;
+          height: auto;
+          border: 4px solid #BD9F67; }
+      .row .leadership-team .team-profile .profile h3 {
+        font-family: "aleoregular", Arial, sans-serif;
+        font-size: 1.75em;
+        color: #BD9F67;
+        text-transform: none;
+        margin: 1em 0px 0.5em; }
+        .row .leadership-team .team-profile .profile h3::after {
+          display: none; }
+      .row .leadership-team .team-profile .profile h4 {
+        font-family: 'Roboto', Arial, sans-serif;
+        font-style: normal;
+        font-weight: 400;
+        color: #094970;
+        font-size: 1.125em;
+        text-transform: uppercase; }
+      .row .leadership-team .team-profile .profile .profile__contact {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin-top: 8px; }
+        .row .leadership-team .team-profile .profile .profile__contact--details {
+          flex: 4; }
+          .row .leadership-team .team-profile .profile .profile__contact--details p {
+            margin: 8px 0px 0px; }
+            .row .leadership-team .team-profile .profile .profile__contact--details p:first-of-type {
+              font-size: 1.125em; }
+            .row .leadership-team .team-profile .profile .profile__contact--details p a {
+              color: #094970;
+              font-family: 'Roboto', Arial, sans-serif;
+              font-style: normal;
+              font-weight: 300; }
+            .row .leadership-team .team-profile .profile .profile__contact--details p:last-of-type a {
+              text-decoration: none; }
+        .row .leadership-team .team-profile .profile .profile__contact--linkedin {
+          flex: 1;
+          align-self: flex-end; }
+          .row .leadership-team .team-profile .profile .profile__contact--linkedin img {
+            opacity: 0; }
+        .row .leadership-team .team-profile .profile .profile__contact:hover > .profile__contact--linkedin img {
+          opacity: 1; }
   .row.support {
     border-top: 4px solid #C3EDFF;
     border-color: #C3EDFF;
@@ -1188,7 +1287,7 @@ nav {
   top: -1000px;
   visibility: hidden; }
 .modal label {
-  background-image: linear-gradient(-90deg, #F2CA46 0%, #F5A623 85%);
+  background-image: linear-gradient(-90deg, #C3EDFF 1%, #98DCFA 82%);
   height: auto;
   width: 100%;
   min-width: 310px;
@@ -1198,7 +1297,7 @@ nav {
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  color: white;
+  color: #094970;
   font-family: 'Roboto', Arial, sans-serif;
   font-style: normal;
   font-weight: 300;
@@ -1206,11 +1305,13 @@ nav {
   text-transform: uppercase;
   text-decoration: none;
   border-radius: 4px;
-  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25); }
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+  transition: color 0.3s ease-in-out; }
   .modal label strong {
     font-weight: 700; }
   .modal label:hover {
-    cursor: pointer; }
+    cursor: pointer;
+    color: white; }
   .modal label:hover > img {
     animation: arrow 1s linear infinite; }
 .modal input[type="checkbox"]:checked ~ .modal__overlay {
@@ -1245,13 +1346,14 @@ nav {
     display: flex; }
     .modal .modal__overlay .modal__wrap .modal__close {
       padding: 8px;
+      border-radius: 0px;
       background: #BD9F67;
       position: relative;
       max-width: 32px;
       min-width: 32px;
       max-height: 32px;
-      top: -64px;
-      left: -64px;
+      top: -66px;
+      left: -66px;
       color: white; }
       .modal .modal__overlay .modal__wrap .modal__close:hover {
         cursor: pointer; }
@@ -1317,7 +1419,7 @@ footer {
     grid-column: 6/13;
     padding-right: 64px; }
     footer .disclaimer p {
-      color: #C3EDFF;
+      color: white;
       font-size: 0.625em;
       line-height: 1.5;
       text-align: right; }
@@ -1407,6 +1509,19 @@ footer {
   to {
     -webkit-transform: translate3d(16px, 0, 0);
     transform: translate3d(16px, 0, 0);
+    opacity: 0; } }
+@keyframes scroll {
+  0% {
+    -webkit-transform: translate3d(0, -4px, 0);
+    transform: translate3d(0, -16px, 0);
+    opacity: 0; }
+  50% {
+    -webkit-transform: translate3d(0, 0px, 0);
+    transform: translate3d(0, 0px, 0);
+    opacity: 1; }
+  100% {
+    -webkit-transform: translate3d(0, 4px, 0);
+    transform: translate3d(0, 4px, 0);
     opacity: 0; } }
 
 /*# sourceMappingURL=master.css.map */

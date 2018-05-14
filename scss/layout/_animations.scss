@@ -83,3 +83,20 @@
         opacity: 0;
     }
 }
+@keyframes scroll {
+    0% {
+        -webkit-transform: translate3d(0, -4px, 0);
+        transform: translate3d(0, -16px, 0);
+        opacity: 0;
+    }
+    50% {
+        -webkit-transform: translate3d(0, 0px, 0);
+        transform: translate3d(0, 0px, 0);
+        opacity: 1;
+    }
+    100% {
+        -webkit-transform: translate3d(0, 4px, 0);
+        transform: translate3d(0, 4px, 0);
+        opacity: 0;
+    }
+}
