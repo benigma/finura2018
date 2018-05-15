@@ -116,9 +116,14 @@ a.button {
     text-decoration: none;
     box-shadow: 2px 2px 4px rgba(0,0,0,0.25);
     border-radius: 4px;
+    transition: color 0.3s ease-in-out;
 
     & strong {
         @include primary-font(700);
+    }
+
+    &:hover {
+        color: $purple;
     }
 
     // &.orange {
@@ -127,12 +132,20 @@ a.button {
     &.orange {
         background-image: linear-gradient(-90deg, #C3EDFF 1%, #98DCFA 82%);
         color: $purple;
+
+        &:hover {
+            color: white;
+        }
     }
     &.green {
         background-image: linear-gradient(-90deg, #669F8C 0%, #568273 85%);
     }
     &.purple {
         background-image: linear-gradient(-90deg, #055F96 0%, #094970 85%);
+
+        &:hover {
+            color: $lightblue;
+        }
     }
     &.gold {
         background-image: linear-gradient(-90deg, #D0B47D 0%, #BFA064 85%);
@@ -142,9 +155,17 @@ a.button {
     }
     &.jellybean {
         background-image: linear-gradient(-90deg, #3581AF 0%, #2B6D95 85%);
+        
+        &:hover {
+            color: $lightblue;
+        }
     }
     &.blue-bayoux {
         background-image: linear-gradient(-90deg, #66808D 0%, #4B626D 85%);
+        
+        &:hover {
+            color: $lightblue;
+        }
     }
 
     &:hover {
