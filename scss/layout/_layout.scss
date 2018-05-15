@@ -8,7 +8,6 @@
         opacity: 0.9;
         align-items: center;
         padding: 0 4em;
-        height: 100vh;
     }
 }
 .service__container {
@@ -755,11 +754,11 @@
     }
 
     &.lifestyle {
-        background: url('../img/casestudies-bg.jpg') no-repeat bottom center;
+        background: url('../img/services-bg.jpg') no-repeat bottom center;
         background-size: cover;
         border: none;
-        border-top: 4px solid $lightblue;
-        border-bottom: 4px solid $gold;
+        border-top: 4px solid $gold;
+        border-bottom: 4px solid $lightblue;
 
         & .lifestyle-content {
             grid-column: 6/13;
@@ -1001,6 +1000,16 @@
         }
     }
 
+    &.technology {
+        background: url('../img/technology-bg.jpg') no-repeat center;
+        background-size: cover;
+        border-bottom: 4px solid $lightblue;
+
+        & p:first-of-type {
+            @include primary-font(300);
+            font-size: 1em;
+        }
+    }
     & .how-technology {
         grid-column: 2/9;
         padding: 96px 64px;

@@ -304,8 +304,7 @@ nav {
   background: #052a41;
   opacity: 0.9;
   align-items: center;
-  padding: 0 4em;
-  height: 100vh; }
+  padding: 0 4em; }
 
 .service__container header {
   grid-column: 1/13;
@@ -828,11 +827,11 @@ nav {
       .row .what-services-items .service-item a.button {
         width: 100%; }
   .row.lifestyle {
-    background: url("../img/casestudies-bg.jpg") no-repeat bottom center;
+    background: url("../img/services-bg.jpg") no-repeat bottom center;
     background-size: cover;
     border: none;
-    border-top: 4px solid #C3EDFF;
-    border-bottom: 4px solid #BD9F67; }
+    border-top: 4px solid #BD9F67;
+    border-bottom: 4px solid #C3EDFF; }
     .row.lifestyle .lifestyle-content {
       grid-column: 6/13;
       padding: 96px 64px;
@@ -996,6 +995,15 @@ nav {
     background: url("../img/charging-bg.jpg") no-repeat center;
     background-size: cover; }
     .row.charging p:first-of-type {
+      font-family: 'Roboto', Arial, sans-serif;
+      font-style: normal;
+      font-weight: 300;
+      font-size: 1em; }
+  .row.technology {
+    background: url("../img/technology-bg.jpg") no-repeat center;
+    background-size: cover;
+    border-bottom: 4px solid #C3EDFF; }
+    .row.technology p:first-of-type {
       font-family: 'Roboto', Arial, sans-serif;
       font-style: normal;
       font-weight: 300;
