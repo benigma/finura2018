@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Finura</title>
+
+    <style>
+        .how-process-map {
+            display: grid;
+            grid-template-columns: 8px 1fr 1fr 1fr 8px;
+            grid-template-rows: 8px 1fr 8px 1fr 8px 1fr 8px;
+        }
+        .one {
+            grid-column: 2;
+            grid-row: 1;
+        }
+        .two {
+            grid-column: 3;
+            grid-row: 1;
+        }
+        .three {
+            grid-column: 4;
+            grid-row: 1;
+        }
+        img {
+            width: 100%;
+            height: 8px;
+            display: block;
+            box-sizing: border-box;
+        }
+        .four {
+            grid-column: 4;
+            grid-row: 3;
+        }
+        .five {
+            grid-column: 3;
+            grid-row: 3;
+        }
+        .six {
+            grid-column: 2;
+            grid-row: 3;
+        }
+        
+        .side-three {
+            grid-column: 5;
+            grid-row: 2;
+        }  
+        .side-three img {
+            height: 100%;
+            width: 8px;
+        }
+        .side-three-bottom {
+            background: #366264;
+            grid-column: 5;
+            grid-row: 3;
+        }
+        .side-four {
+            background: #366264;
+            grid-column: 5;
+            grid-row: 1;
+        }
+        .side-six {
+            grid-column: 1;
+            grid-row: 4;
+        }
+        .side-six img {
+            height: 100%;
+            width: 8px;
+        }
+        .side-six-top {
+            background: #3C2E7F;
+            grid-column: 1;
+            grid-row: 3;
+        }
+        .side-six-bottom {
+            background: #3C2E7F;
+            grid-column: 1;
+            grid-row: 5;
+        }
+        .side-seven {
+            grid-column: 1;
+            grid-row: 6;
+        }
+        .side-nine {
+            grid-column: 5;
+            grid-row: 6;
+        }
+        .side-nine-top {
+            background: #093E60;
+            grid-column: 5;
+            grid-row: 5;
+        }
+        .side-nine-bottom {
+            background: #093E60;
+            grid-column: 5;
+            grid-row: 7;
+        }
+        .side-twelve {
+            background: #093E60;
+            grid-column: 1;
+            grid-row: 7;
+        }
+
+        .seven {
+            grid-column: 2;
+            grid-row: 6;
+        }
+        .eight {
+            grid-column: 3;
+            grid-row: 6;
+        }
+        .nine {
+            grid-column: 4;
+            grid-row: 6;
+        }
+
+        .ten {
+            grid-column: 4;
+            grid-row: 7;
+        }
+        .eleven {
+            grid-column: 3;
+            grid-row: 7;
+        }
+        .twelve {
+            grid-column: 2;
+            grid-row: 7;
+        }
+
+        .side img {
+            height: 175px;
+            width: 8px;
+            display: block;
+            box-sizing: border-box;
+        }
+
+        .point-one {
+            grid-column: 2;
+            grid-row: 2;
+            justify-self: center;
+            align-self: start;
+        }
+        .point-two {
+            grid-column: 3;
+            grid-row: 2;
+            justify-self: center;
+            align-self: start;
+        }
+        .point-three {
+            grid-column: 4;
+            grid-row: 2;
+            justify-self: center;
+            align-self: start;
+        }
+        .point-four {
+            grid-column: 4;
+            grid-row: 4;
+            justify-self: center;
+            align-self: start;
+        }
+        .point-five {
+            grid-column: 3;
+            grid-row: 4;
+            justify-self: center;
+            align-self: start;
+        }
+        .point-six {
+            grid-column: 2;
+            grid-row: 4;
+            justify-self: center;
+            align-self: start;
+        }
+        .point-seven {
+            grid-column: 4;
+            grid-row: 6;
+            justify-self: center;
+            align-self: start;
+        }
+        .point-eight {
+            grid-column: 3;
+            grid-row: 6;
+            justify-self: center;
+            align-self: start;
+        }
+        .point-nine {
+            grid-column: 2;
+            grid-row: 6;
+            justify-self: center;
+            align-self: start;
+        }
+
+        .map-item {
+            width: auto;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            padding: 16px 16px 0px;
+            box-sizing: border-box;
+        }
+        .map-item .item-number {
+            font-size: 3em;
+            color: gold;
+            flex: 1;
+            text-align: center;
+        }
+        .map-item .item-description {
+            flex: 4;
+        }
+    </style>
+
+</head>
+<body>
+
+    <div class="row" id="process">
+        <div class="how-process">
+            <h3>Our <strong>Process</strong></h3>
+            <p>Our approach is to spend time to learn about you, your family, your business and any professional and personal lifestyle aspirations.</p>
+            <p>We have a deep understanding of what makes every client an individual, what is important to you, what you want to achieve and when you want to achieve it by. We also place an enhanced focus on Lifestyle Modelling, which uses sophisticated software to allow clients to create personal, visual plans to reach their financial objectives. Only once we have this personal journey mapped, can we can prescribe a solution to safeguard your financial future.</p>
+            <p>We believe this combined proposition is unique to the market and delivers exceptional value-add at a highly competitive cost.</p>
+        </div>
+
+        <div class="how-process-map"> 
+            <div class="empty"></div>
+            <div class="one"><img src="img/process/1.png" /></div>
+            <div class="two"><img src="img/process/2.png" /></div>
+            <div class="three"><img src="img/process/3.png" /></div>
+            <div class="side-four"></div>
+
+            <div class="point-one">
+                <div class="map-item">
+                    <div class="item-number">1</div>
+                    <div class="item-description">
+                        <h3>Engagement</h3>
+                        <p>An introductory meeting to fully explain how our service works, identify your primary objectives and answer any questions.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="point-two">
+                <div class="map-item">
+                    <div class="item-number">2</div>
+                    <div class="item-description">
+                        <h3>Discovery</h3>
+                        <p>Here we take the conversation to the next level and expand upon your objectives and define your goals. We will now endeavour to agree a scope of work and provide a fee estimate.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="point-three">
+                <div class="map-item">
+                    <div class="item-number">3</div>
+                    <div class="item-description">
+                        <h3>Research &amp; Analysis</h3>
+                        <p>This is where we obtain a full picture of your current financial position and any existing plans you may have. We will then begin work on a solution.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="side-three"><img src="img/process/3-side.png" /></div>
+            <div class="side-three-bottom"></div>
+            <div class="four"><img src="img/process/4.png" /></div>
+            <div class="five"><img src="img/process/5.png" /></div>
+            <div class="six"><img src="img/process/6.png" /></div>
+            <div class="side-six-top"></div>
+
+            <div class="point-four">
+                <div class="map-item">
+                    <div class="item-number">6</div>
+                    <div class="item-description">
+                        <h3>Ongoing Services</h3>
+                        <p>Most clients agree to an ongoing service from us. This allows us to meet regularly and be pro-active to ensure your plans stay on track.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="point-five">
+                <div class="map-item">
+                    <div class="item-number">5</div>
+                    <div class="item-description">
+                        <h3>Implementation</h3>
+                        <p>Once you fully understand our recommendations, how they work and choose the right ones for you, we put them into action.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="point-six">
+                <div class="map-item">
+                    <div class="item-number">4</div>
+                    <div class="item-description">
+                        <h3>Recommendations</h3>
+                        <p>We will present our recommended solutions and demonstrate how and why these have been designed to achieve your goals.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="side-six"><img src="img/process/6-side.png" /></div>
+            <div class="side-six-bottom"></div>
+            <div class="seven"><img src="img/process/7.png" /></div>
+            <div class="eight"><img src="img/process/8.png" /></div>
+            <div class="nine"><img src="img/process/9.png" /></div>
+
+            <div class="side side-nine"><img src="img/process/9-side.png" /></div>
+            <div class="side-nine-bottom"></div>
+
+            <div class="point-seven">
+                <div class="map-item">
+                    <div class="item-number">7</div>
+                    <div class="item-description">
+                        <h3>Staying In Touch</h3>
+                        <p>Our business is founded on regular client communication and we will keep you updated with relevant and timely communications.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="point-eight">
+                <div class="map-item">
+                    <div class="item-number">8</div>
+                    <div class="item-description">
+                        <h3>Reviews</h3>
+                        <p>We will meet with you at least once a year to discuss your plans' progress to ensure they remain on track and make any necessary adjustments.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="point-nine">
+                <div class="map-item">
+                    <div class="item-number">9</div>
+                    <div class="item-description">
+                        <h3>Always on call</h3>
+                        <p>If you want to talk to us about anything at all, you can contact any member of the team, at any time.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="ten"><img src="img/process/10.png" /></div>
+            <div class="eleven"><img src="img/process/11.png" /></div>
+            <div class="twelve"><img src="img/process/12.png" /></div>
+            <div class="side side-seven"><img src="img/process/7-side.png" /></div>
+            <div class="side-twelve"></div>
+        </div>
+    </div>
+    
+</body>
+</html>

@@ -185,13 +185,16 @@ input[type="text"], input[type="tel"], input[type="email"], input[type="search"]
     padding: 18px 22px;
     width: 100%;
     margin-bottom: 16px;
+    @include primary-font(300);
     font-size: 1em;
     font-weight: 300;
+    -webkit-appearance: none;
 }
 input[type="submit"] {
     background: $purple;
     color: white;
     font-size: 1em;
+    @include primary-font(400);
     padding: 20px 64px;
     border-radius: 4px;
     text-transform: uppercase;
@@ -201,6 +204,7 @@ input[type="submit"] {
     text-align: center;
     margin-left: calc(100% - 226px);
     transition: all 0.5s ease-in-out;
+    -webkit-appearance: none;
 
     &:hover {
         cursor: pointer;
