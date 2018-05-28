@@ -8,6 +8,7 @@
         opacity: 0.9;
         align-items: center;
         padding: 0 4em;
+        min-height: 90vh;
     }
 }
 .news__grid--container {
@@ -447,14 +448,14 @@
         }
     
         &.why {
-            background-image: url('../img/01.png'), url('../img/purple-shade.png'), url('../img/why-bg.jpg');
+            background-image: url('../img/01.png'), url('../img/purple-shade.png'), url('../img/why-alt.jpg');
             background-position: left center, top left, top center;
             background-repeat: no-repeat, no-repeat, no-repeat;
             background-size: 25%, 50% 100%, cover;
         }
 
         &.what {
-            background-image: url('../img/02.png'), url('../img/purple-shade.png'), url('../img/what-bg.jpg');
+            background-image: url('../img/02.png'), url('../img/purple-shade.png'), url('../img/what-alt.jpg');
             background-position: left center, top left, top center;
             background-repeat: no-repeat, no-repeat, no-repeat;
             background-size: 25%, 50% 100%, cover;
@@ -666,7 +667,7 @@
         }
 
         &.how {
-            background-image: url('../img/03.png'), url('../img/gold-shade.png'), url('../img/how-bg.jpg');
+            background-image: url('../img/03.png'), url('../img/purple-shade.png'), url('../img/how-alt.jpg');
             background-position: left center, top left, top center;
             background-repeat: no-repeat, no-repeat, no-repeat;
             background-size: 25%, 50% 100%, cover;
@@ -677,7 +678,7 @@
         }
 
         &.who {
-            background-image: url('../img/04.png'), url('../img/purple-shade.png'), url('../img/who-bg.jpg');
+            background-image: url('../img/04.png'), url('../img/purple-shade.png'), url('../img/who-alt.jpg');
             background-position: left center, top left, top center;
             background-repeat: no-repeat, no-repeat, no-repeat;
             background-size: 25%, 50% 100%, cover;
@@ -943,7 +944,7 @@
 
         &-img {
             grid-column: 1/6;
-            background: url('../img/why-relationships.jpg') no-repeat center;
+            background: url('../img/why-relationships-alt.jpg') no-repeat center;
             background-size: cover;
         }
     }

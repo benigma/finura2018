@@ -213,7 +213,6 @@ input[type="submit"] {
   background: url(../img/bg.jpg) no-repeat top center;
   background-size: cover;
   height: 100%;
-  min-height: 100vh;
   overflow: hidden; }
 
 .news__grid--container {
@@ -269,7 +268,7 @@ nav {
   flex-wrap: nowrap;
   justify-content: space-between; }
   #navigation__container.selected {
-    width: 370px;
+    width: 300px;
     right: 0%;
     animation: slideInRight 0.25s linear forwards;
     position: fixed; }
@@ -294,7 +293,7 @@ nav {
   #navigation__container ul li {
     border-bottom: 1px solid #C3EDFF;
     text-align: right;
-    font-size: 1.3125em;
+    font-size: 1.125em;
     display: block;
     background: transparent; }
     #navigation__container ul li a {
@@ -329,7 +328,8 @@ nav {
   background: #052a41;
   opacity: 0.9;
   align-items: center;
-  padding: 0 4em; }
+  padding: 0 4em;
+  min-height: 90vh; }
 
 .news__grid--container header {
   grid-column: 1/13;
@@ -636,12 +636,12 @@ nav {
     padding: 4em;
     height: 100%; }
   .service__container header.why {
-    background-image: url("../img/01.png"), url("../img/purple-shade.png"), url("../img/why-bg.jpg");
+    background-image: url("../img/01.png"), url("../img/purple-shade.png"), url("../img/why-alt.jpg");
     background-position: left center, top left, top center;
     background-repeat: no-repeat, no-repeat, no-repeat;
     background-size: 25%, 50% 100%, cover; }
   .service__container header.what {
-    background-image: url("../img/02.png"), url("../img/purple-shade.png"), url("../img/what-bg.jpg");
+    background-image: url("../img/02.png"), url("../img/purple-shade.png"), url("../img/what-alt.jpg");
     background-position: left center, top left, top center;
     background-repeat: no-repeat, no-repeat, no-repeat;
     background-size: 25%, 50% 100%, cover; }
@@ -793,14 +793,14 @@ nav {
     background-repeat: no-repeat, no-repeat;
     background-size: 50% 100%, cover; }
   .service__container header.how {
-    background-image: url("../img/03.png"), url("../img/gold-shade.png"), url("../img/how-bg.jpg");
+    background-image: url("../img/03.png"), url("../img/purple-shade.png"), url("../img/how-alt.jpg");
     background-position: left center, top left, top center;
     background-repeat: no-repeat, no-repeat, no-repeat;
     background-size: 25%, 50% 100%, cover; }
     .service__container header.how h1 {
       color: #C3EDFF; }
   .service__container header.who {
-    background-image: url("../img/04.png"), url("../img/purple-shade.png"), url("../img/who-bg.jpg");
+    background-image: url("../img/04.png"), url("../img/purple-shade.png"), url("../img/who-alt.jpg");
     background-position: left center, top left, top center;
     background-repeat: no-repeat, no-repeat, no-repeat;
     background-size: 25%, 50% 100%, cover;
@@ -985,7 +985,7 @@ nav {
     align-self: center; }
     .row .why-relationships-img {
       grid-column: 1/6;
-      background: url("../img/why-relationships.jpg") no-repeat center;
+      background: url("../img/why-relationships-alt.jpg") no-repeat center;
       background-size: cover; }
   .row .why-thinking {
     grid-column: 1/7;
