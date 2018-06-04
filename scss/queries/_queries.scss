@@ -85,7 +85,7 @@
             grid-gap: 0px;
 
             &.why {
-                background-image: url(../img/01.png), url(../img/purple-shade.png), url(../img/why-bg.jpg);
+                background-image: url(../img/01.png), url(../img/purple-shade.png), url(../img/why-alt.jpg);
                 background-position: left center, top left, top center;
                 background-repeat: no-repeat, no-repeat, no-repeat;
                 background-size: 100%, 100%, cover;
@@ -499,15 +499,28 @@
             grid-column: 1/13;
             padding: 24px 24px;
         }
-
-        & .how-process {
+        &.behavioural .behavioural-content {
             grid-column: 1/13;
             padding: 24px 24px;
         }
-        & .how-process-map {
+
+        & .how-process {
             grid-column: 1/13;
-            padding: 24px 24px;
-            display: none;
+            padding: 24px 24px 0px;
+        }
+        & .how-process-map {
+            grid-template-rows: auto;
+            grid-column: 1/13;
+            padding: 0px 24px 24px;
+
+            & .empty, & .one, & .two, & .three, & .side-four, & .side-three, & .side-three-bottom, & .side-six, & .side-six-bottom, & .side-six-top, & .side-nine, & .side-nine-bottom, & .side-seven, & .side-twelve, & .four, & .five, & .six, & .seven, & .eight, & .nine, & .ten, & .eleven, & .twelve {
+                display: none;
+            }
+
+            & .point-one, & .point-two, & .point-three, & .point-four, & .point-five, & .point-six, & .point-seven, & .point-eight, & .point-nine, & .point-ten, & .point-eleven, & .point-twelve {
+                grid-column: 1/13;
+                grid-row: auto;
+            }
         }
         & .how-technology {
             grid-column: 1/13;
@@ -517,7 +530,7 @@
                 font-size: 0.8125em;
 
                 &:first-of-type {
-                    font-size: 0.8125em;
+                    font-size: 1.5em;
                 }
             }
         }
@@ -696,6 +709,11 @@
         grid-template-columns: 1fr;
         grid-column-gap: 0px;
         justify-items: center;
+        padding-bottom: 32px;
+
+        & a {
+            color: white;
+        }
 
         & .logo {
             grid-column: 1/13;

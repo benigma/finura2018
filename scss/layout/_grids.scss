@@ -4,12 +4,20 @@
     grid-column-gap: 1.5em;
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: 142px auto;
-    background: url(../img/bg.jpg) no-repeat top center;
-    background-size: cover;
+    background-image: url('../img/purple-shade.png'), url('../img/bg.jpg');
+    background-position: top left, top center;
+    background-repeat: no-repeat, no-repeat;
+    background-size: 50% 100%, cover;
     height: 100%;
     overflow: hidden;
 }
 .news__grid--container {
+    display: grid;
+    grid-column-gap: 1.5em;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 142px auto;
+}
+.policy__grid--container {
     display: grid;
     grid-column-gap: 1.5em;
     grid-template-columns: repeat(12, 1fr);
