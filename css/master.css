@@ -379,7 +379,7 @@ nav {
     .news__grid--container header .search input[type="submit"] {
       width: 10%;
       margin: 0px;
-      height: 56px;
+      height: 57px;
       border-top-left-radius: 0px;
       border-bottom-left-radius: 0px;
       border: none;
@@ -446,10 +446,10 @@ nav {
         font-size: 1.5em; }
     .news__grid--container .news__stories--grid .main__stories--grid .main__story--left {
       grid-column: 1;
-      grid-row: 2; }
+      grid-row: auto; }
     .news__grid--container .news__stories--grid .main__stories--grid .main__story-right {
       grid-column: 2;
-      grid-row: 2; }
+      grid-row: auto; }
   .news__grid--container .news__stories--grid .side__strories--grid {
     grid-column: 9/13;
     grid-row: 1/3; }
@@ -1037,6 +1037,8 @@ nav {
   grid-column: 1/13;
   grid-row: auto;
   border-bottom: 4px solid #BD9F67; }
+  .row:last-of-type {
+    border-bottom: none; }
   .row.no-border {
     border: none; }
   .row.border-top-lb {
@@ -1067,7 +1069,7 @@ nav {
     align-self: center; }
     .row .why-thinking-img {
       grid-column: 7/13;
-      background: url("../img/why-thinking.jpg") no-repeat center;
+      background: url("../img/why-thinking-alt.jpg") no-repeat center;
       background-size: cover; }
   .row .why-csr {
     grid-column: 2/8;
@@ -2008,6 +2010,8 @@ footer {
 footer.home {
   background: none;
   border-top: none; }
+  footer.home .logo {
+    align-self: center; }
 
 @keyframes fadeIn {
   from {

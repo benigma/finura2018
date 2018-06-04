@@ -61,7 +61,7 @@
             & input[type="submit"] {
                 width: 10%;
                 margin: 0px;
-                height: 56px;
+                height: 57px;
                 border-top-left-radius: 0px;
                 border-bottom-left-radius: 0px;
                 border: none;
@@ -151,11 +151,11 @@
             }
             & .main__story--left {
                 grid-column: 1;
-                grid-row: 2; 
+                grid-row: auto; 
             }
             & .main__story-right {
                 grid-column: 2;
-                grid-row: 2; 
+                grid-row: auto; 
             }
         }
 
@@ -1008,6 +1008,10 @@
     grid-row: auto;
     border-bottom: 4px solid $gold;
 
+    &:last-of-type {
+        border-bottom: none;
+    }
+
     &.no-border {
         border: none;
     }
@@ -1049,7 +1053,7 @@
 
         &-img {
             grid-column: 7/13;
-            background: url('../img/why-thinking.jpg') no-repeat center;
+            background: url('../img/why-thinking-alt.jpg') no-repeat center;
             background-size: cover;
         }
     }
@@ -2363,4 +2367,8 @@ footer {
 footer.home {
     background: none;
     border-top: none;
+
+    & .logo {
+        align-self: center;
+    }
 }
