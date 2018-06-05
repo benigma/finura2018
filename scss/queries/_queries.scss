@@ -37,12 +37,14 @@
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: 80px auto auto;
         grid-column-gap: 0px;
+        background-size: cover, cover;
 
         & header {
             grid-column: 1/13;
             padding: 0 24px;
-            background: url('../img/purple-shade.png') repeat;
+            background: none;
             align-items: start;
+            min-height: auto;
 
             & h1 {
                 padding: 164px 0px 64px;
@@ -88,7 +90,7 @@
                 background-image: url(../img/01.png), url(../img/purple-shade.png), url(../img/why-alt.jpg);
                 background-position: left center, top left, top center;
                 background-repeat: no-repeat, no-repeat, no-repeat;
-                background-size: 100%, 100%, cover;
+                background-size: 100%, cover, cover;
 
                 & .intro {
                     grid-column: 1/13;
@@ -102,7 +104,7 @@
             &.what {
                 background-position: left center, top left, top center;
                 background-repeat: no-repeat, no-repeat, no-repeat;
-                background-size: 100%, 100%, cover;
+                background-size: 100%, cover, cover;
 
                 & .intro {
                     grid-column: 1/13;
@@ -116,7 +118,7 @@
             &.awards {
                 background-position: left center, top left, top center;
                 background-repeat: no-repeat, no-repeat, no-repeat;
-                background-size: 100%, 100%, cover;
+                background-size: 100%, cover, cover;
 
                 & .intro {
                     grid-column: 1/13;
@@ -130,7 +132,7 @@
 
                     & a {
                         & img {
-                            width: 16px;
+                            width: 32px;
                             height: auto;
                         }
                     }
@@ -153,7 +155,7 @@
 
                     & a {
                         & img {
-                            width: 16px;
+                            width: 32px;
                             height: auto;
                         }
                     }
@@ -189,7 +191,7 @@
             &.how {
                 background-position: left center, top left, top center;
                 background-repeat: no-repeat, no-repeat, no-repeat;
-                background-size: 100%, 100%, cover;
+                background-size: 100%, cover, cover;
 
                 & .intro {
                     grid-column: 1/13;
@@ -203,7 +205,7 @@
             &.who {
                 background-position: left center, top left, top center;
                 background-repeat: no-repeat, no-repeat, no-repeat;
-                background-size: 100%, 100%, cover;
+                background-size: 100%, cover, cover;
 
                 & .intro {
                     grid-column: 1/13;
@@ -231,7 +233,7 @@
 
                     & a {
                         & img {
-                            width: 16px;
+                            width: 32px;
                             height: auto;
                         }
                     }
@@ -295,7 +297,7 @@
                 background-image: url(../img/purple-shade.png), url(../img/news-bg.jpg);
                 background-position: top left, top center;
                 background-repeat:no-repeat, no-repeat;
-                background-size: 100%, cover;
+                background-size: cover, cover;
                 min-height: 0px;
     
                 & .intro {
@@ -308,6 +310,9 @@
                 }
 
                 & .search {
+                    grid-column: 1/13;
+                    margin: 0 16px;
+
                     & input[type="search"] {
                         width: 100%;
                         border-top-right-radius: 4px;
@@ -322,7 +327,7 @@
             &.post {
                 background-position: top left, top center;
                 background-repeat:no-repeat, no-repeat;
-                background-size: 100%, cover;
+                background-size: cover, cover;
                 min-height: 0px;
     
                 & .intro {
@@ -333,12 +338,21 @@
                         font-size: 0.8125em;
                     }
                 }
+                & .scroll {
+
+                    & a {
+                        & img {
+                            width: 32px;
+                            height: auto;
+                        }
+                    }
+                }
             }
 
             &.blog {
                 background-position: top left, top center;
                 background-repeat:no-repeat, no-repeat;
-                background-size: 100%, cover;
+                background-size: cover, cover;
                 min-height: 0px;
     
                 & .intro {
@@ -347,6 +361,15 @@
     
                     & p {
                         font-size: 0.8125em;
+                    }
+                }
+                & .scroll {
+
+                    & a {
+                        & img {
+                            width: 32px;
+                            height: auto;
+                        }
                     }
                 }
             }

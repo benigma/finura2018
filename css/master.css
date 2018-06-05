@@ -2110,12 +2110,14 @@ footer.home {
   .home__container {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 80px auto auto;
-    grid-column-gap: 0px; }
+    grid-column-gap: 0px;
+    background-size: cover, cover; }
     .home__container header {
       grid-column: 1/13;
       padding: 0 24px;
-      background: url("../img/purple-shade.png") repeat;
-      align-items: start; }
+      background: none;
+      align-items: start;
+      min-height: auto; }
       .home__container header h1 {
         padding: 164px 0px 64px;
         font-size: 2em; }
@@ -2141,7 +2143,7 @@ footer.home {
         background-image: url(../img/01.png), url(../img/purple-shade.png), url(../img/why-alt.jpg);
         background-position: left center, top left, top center;
         background-repeat: no-repeat, no-repeat, no-repeat;
-        background-size: 100%, 100%, cover; }
+        background-size: 100%, cover, cover; }
         .service__container header.why .intro {
           grid-column: 1/13;
           padding: 24px 24px; }
@@ -2150,7 +2152,7 @@ footer.home {
       .service__container header.what {
         background-position: left center, top left, top center;
         background-repeat: no-repeat, no-repeat, no-repeat;
-        background-size: 100%, 100%, cover; }
+        background-size: 100%, cover, cover; }
         .service__container header.what .intro {
           grid-column: 1/13;
           padding: 24px 24px; }
@@ -2159,14 +2161,14 @@ footer.home {
       .service__container header.awards {
         background-position: left center, top left, top center;
         background-repeat: no-repeat, no-repeat, no-repeat;
-        background-size: 100%, 100%, cover; }
+        background-size: 100%, cover, cover; }
         .service__container header.awards .intro {
           grid-column: 1/13;
           padding: 24px 24px; }
           .service__container header.awards .intro p {
             font-size: 0.8125em; }
         .service__container header.awards .scroll a img {
-          width: 16px;
+          width: 32px;
           height: auto; }
       .service__container header.fees {
         background-position: top left, top center;
@@ -2178,7 +2180,7 @@ footer.home {
           .service__container header.fees .intro p {
             font-size: 0.8125em; }
         .service__container header.fees .scroll a img {
-          width: 16px;
+          width: 32px;
           height: auto; }
       .service__container header .page__introduction {
         padding: 0px 24px;
@@ -2198,7 +2200,7 @@ footer.home {
       .service__container header.how {
         background-position: left center, top left, top center;
         background-repeat: no-repeat, no-repeat, no-repeat;
-        background-size: 100%, 100%, cover; }
+        background-size: 100%, cover, cover; }
         .service__container header.how .intro {
           grid-column: 1/13;
           padding: 24px 24px; }
@@ -2207,7 +2209,7 @@ footer.home {
       .service__container header.who {
         background-position: left center, top left, top center;
         background-repeat: no-repeat, no-repeat, no-repeat;
-        background-size: 100%, 100%, cover; }
+        background-size: 100%, cover, cover; }
         .service__container header.who .intro {
           grid-column: 1/13;
           padding: 24px 24px; }
@@ -2223,7 +2225,7 @@ footer.home {
           .service__container header.tax .intro p, .service__container header.mortgage .intro p, .service__container header.retirement .intro p, .service__container header.estate .intro p, .service__container header.insurance .intro p, .service__container header.sme .intro p {
             font-size: 0.8125em; }
         .service__container header.tax .scroll a img, .service__container header.mortgage .scroll a img, .service__container header.retirement .scroll a img, .service__container header.estate .scroll a img, .service__container header.insurance .scroll a img, .service__container header.sme .scroll a img {
-          width: 16px;
+          width: 32px;
           height: auto; }
       .service__container header .page__introduction {
         padding: 0px 24px;
@@ -2259,39 +2261,48 @@ footer.home {
       background-image: url(../img/purple-shade.png), url(../img/news-bg.jpg);
       background-position: top left, top center;
       background-repeat: no-repeat, no-repeat;
-      background-size: 100%, cover;
+      background-size: cover, cover;
       min-height: 0px; }
       .news__grid--container header.news .intro {
         grid-column: 1/13;
         padding: 24px 24px; }
         .news__grid--container header.news .intro p {
           font-size: 0.8125em; }
-      .news__grid--container header.news .search input[type="search"] {
-        width: 100%;
-        border-top-right-radius: 4px;
-        border-bottom-right-radius: 4px; }
-      .news__grid--container header.news .search input[type="submit"] {
-        display: none; }
+      .news__grid--container header.news .search {
+        grid-column: 1/13;
+        margin: 0 16px; }
+        .news__grid--container header.news .search input[type="search"] {
+          width: 100%;
+          border-top-right-radius: 4px;
+          border-bottom-right-radius: 4px; }
+        .news__grid--container header.news .search input[type="submit"] {
+          display: none; }
     .news__grid--container header.post {
       background-position: top left, top center;
       background-repeat: no-repeat, no-repeat;
-      background-size: 100%, cover;
+      background-size: cover, cover;
       min-height: 0px; }
       .news__grid--container header.post .intro {
         grid-column: 1/13;
         padding: 24px 24px; }
         .news__grid--container header.post .intro p {
           font-size: 0.8125em; }
+      .news__grid--container header.post .scroll a img {
+        width: 32px;
+        height: auto; }
     .news__grid--container header.blog {
       background-position: top left, top center;
       background-repeat: no-repeat, no-repeat;
-      background-size: 100%, cover;
+      background-size: cover, cover;
       min-height: 0px; }
       .news__grid--container header.blog .intro {
         grid-column: 1/13;
         padding: 24px 24px; }
         .news__grid--container header.blog .intro p {
           font-size: 0.8125em; }
+      .news__grid--container header.blog .scroll a img {
+        width: 32px;
+        height: auto; }
     .news__grid--container .news__stories--grid {
       padding: 24px; }
       .news__grid--container .news__stories--grid .main__stories--grid {
