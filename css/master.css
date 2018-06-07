@@ -425,7 +425,6 @@ nav {
     .news__grid--container .news__stories--grid .main__stories--grid h3 {
       font-family: "aleoregular", Arial, sans-serif;
       text-transform: uppercase;
-      margin-top: 1em;
       font-size: 1.125em;
       line-height: 1.275; }
       .news__grid--container .news__stories--grid .main__stories--grid h3 a {
@@ -1158,11 +1157,16 @@ nav {
       box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.35);
       display: flex;
       flex-wrap: wrap;
-      justify-content: space-between; }
+      justify-content: flex-start; }
       .row .what-services-new .services__list--test--item {
-        width: 30%; }
+        width: 30%;
+        margin-right: 5%; }
         .row .what-services-new .services__list--test--item:nth-child(n+4) {
           margin-top: 32px; }
+        .row .what-services-new .services__list--test--item:nth-child(3) {
+          margin-right: 0px; }
+        .row .what-services-new .services__list--test--item:last-child {
+          margin-right: 0px; }
         .row .what-services-new .services__list--test--item h3 a {
           color: #BD9F67;
           text-decoration: none;
@@ -1299,8 +1303,8 @@ nav {
       font-style: normal;
       font-weight: 300;
       color: black;
-      font-size: 1em;
-      line-height: 1.3125;
+      font-size: 0.875em;
+      line-height: 1.5;
       padding-bottom: 16px; }
     .row .service-sidebar a.button {
       width: 100%;

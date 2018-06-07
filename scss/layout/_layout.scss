@@ -118,7 +118,6 @@
             h3 {
                 font-family: $headline-regular;
                 text-transform: uppercase;
-                margin-top: 1em;
                 font-size: 1.125em;
                 line-height: 1.275;
 
@@ -1186,13 +1185,20 @@
             box-shadow: 2px 2px 3px rgba(0,0,0,0.35);
             display: flex;
             flex-wrap: wrap;
-            justify-content: space-between;
+            justify-content: flex-start;
 
             &--item {
                 width: 30%;
+                margin-right: 5%;
 
                 &:nth-child(n+4) {
                     margin-top: 32px;
+                }
+                &:nth-child(3) {
+                    margin-right: 0px;
+                }
+                &:last-child {
+                    margin-right: 0px;
                 }
 
                 & h3 {
@@ -1393,8 +1399,8 @@
         & p:first-of-type {
             @include primary-font(300);
             color: black;
-            font-size: 1em;
-            line-height: 1.3125;
+            font-size: 0.875em;
+            line-height: 1.5;
             padding-bottom: 16px;
         }
         & a.button {
