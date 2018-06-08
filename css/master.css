@@ -1336,6 +1336,14 @@ nav {
   .row .service-content {
     grid-column: 6/13;
     padding: 64px; }
+    .row .service-content ul {
+      margin-left: 40px;
+      list-style: disc;
+      font-family: 'Roboto', Arial, sans-serif;
+      font-style: normal;
+      font-weight: 300;
+      font-size: 1em;
+      line-height: 1.3125; }
   .row .service-sidebar {
     grid-column: 1/5;
     padding: 128px 64px 64px; }
@@ -2519,6 +2527,9 @@ footer.home {
       grid-column: 1/13;
       grid-row: 1;
       padding: 24px; }
+      .row .service-content ul {
+        margin-left: 24px;
+        font-size: 0.8125em; }
     .row .service-sidebar {
       grid-column: 1/13;
       grid-row: 2;

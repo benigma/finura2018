@@ -1449,6 +1449,14 @@
     & .service-content {
         grid-column: 6/13;
         padding: 64px;
+
+        & ul {
+            margin-left: 40px;
+            list-style: disc;
+            @include primary-font(300);
+            font-size: 1em;
+            line-height: 1.3125;
+        }
     }
     & .service-sidebar {
         grid-column: 1/5;

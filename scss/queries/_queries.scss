@@ -637,6 +637,11 @@
             grid-column: 1/13;
             grid-row: 1;
             padding: 24px;
+
+            & ul {
+                margin-left: 24px;
+                font-size: 0.8125em;
+            }
         }
         & .service-sidebar {
             grid-column: 1/13;
