@@ -161,6 +161,17 @@
                     }
                 }
             }
+            &.technology {
+
+                & .intro {
+                    grid-column: 1/13;
+                    padding: 24px 24px;
+
+                    & p {
+                        font-size: 0.8125em;
+                    }
+                }
+            }
 
             & .page__introduction {
                 padding: 0px 24px;
@@ -497,14 +508,14 @@
                     font-size: 0.8125em;
                 }
             }
-            & .services__list {
+            & .services__list--test {
                 grid-column: 1/3;
                 grid-row: 2;
                 padding: 24px 24px 24px 24px;
                 margin: 0 0 0 0;
                 flex-direction: column;
 
-                & .services__list--item {
+                & .services__list--test--item {
                     width: 100%;
                     padding: 0px 0px 0px 0px;
                     margin-top: 24px;
@@ -680,6 +691,23 @@
             padding: 48px 24px;
             grid-template-columns: repeat(2, 1fr);
         }
+
+        & .mywealth {
+            grid-column: 1/13;
+            padding: 24px;
+        }
+        & .tech-lifestyle-img {
+            display: none;
+        }
+        & .tech-lifestyle {
+            grid-column: 1/13;
+            padding: 24px;
+        }
+        & .tech-behaviour {
+            grid-column: 1/13;
+            padding: 24px;
+        }
+
     }
 
     .awards-section {

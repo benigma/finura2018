@@ -768,6 +768,19 @@
             & h1 {
                 color: $lightblue;
             }
+            
+            & .intro {
+                display: flex;
+                flex-direction: column;
+                flex-wrap: wrap;
+                justify-content: flex-end;
+                align-items: flex-start;
+                padding-bottom: 32px;
+
+                & p {
+                    color: white;
+                }
+            }
         }
 
         &.who {
@@ -838,6 +851,31 @@
                 flex-wrap: wrap;
                 justify-content: center;
                 align-items: flex-start;
+
+                & p {
+                    color: white;
+                }
+            }
+        }
+
+        &.technology {
+            background-image: url('../img/purple-shade.png'), url('../img/technology-bg.jpg');
+            background-position: top left, top center;
+            background-repeat: no-repeat, no-repeat;
+            background-size: 50% 100%, cover;
+            height: 100%;
+
+            & h1 {
+                color: $lightblue;
+            }
+
+            & .intro {
+                display: flex;
+                flex-direction: column;
+                flex-wrap: wrap;
+                justify-content: flex-end;
+                align-items: flex-start;
+                padding-bottom: 32px;
 
                 & p {
                     color: white;
@@ -984,6 +1022,7 @@
                 font-size: 1.125em;
                 text-transform: uppercase;
                 margin: 12px 0px;
+                text-shadow: 1px 1px 2px rgba(0,0,0,0.6);
 
                 &:after {
                     display: none;
@@ -993,6 +1032,7 @@
                 color: white;
                 font-size: 0.875em;
                 line-height: 1.25;
+                text-shadow: 1px 1px 2px rgba(0,0,0,0.6);
             }
         }
     }
@@ -1082,6 +1122,24 @@
         grid-column: 4/12;
         padding: 96px 64px;
         align-self: center;
+    }
+
+    & .mywealth {
+        grid-column: 2/10;
+        padding: 48px 0px;
+    }
+    & .tech-lifestyle-img {
+        grid-column: 1/6;
+        background: url('../img/lifestyle-tech.jpg') no-repeat center;
+        background-size: cover;
+    }
+    & .tech-lifestyle {
+        grid-column: 6/12;
+        padding: 48px;
+    }
+    & .tech-behaviour {
+        grid-column: 2/8;
+        padding: 48px 0px;
     }
 
     //New Services Section
@@ -1349,7 +1407,7 @@
         border-bottom: 4px solid $lightblue;
 
         & .lifestyle-content {
-            grid-column: 4/13;
+            grid-column: 5/12;
             padding: 96px 64px;
             align-self: center;
             
@@ -1840,6 +1898,10 @@
 
         & .advisers-intro {
             grid-column: 9/13;
+
+            & p:first-of-type {
+                font-size: 1.75em;
+            }
         }
     }
 
