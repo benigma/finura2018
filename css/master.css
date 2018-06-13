@@ -385,20 +385,8 @@ nav {
       border: none;
       padding: 0px;
       min-width: 150px; }
-  .news__grid--container header.news {
+  .news__grid--container header.news, .news__grid--container header.post, .news__grid--container header.blog {
     background-image: url("../img/purple-shade.png"), url("../img/news-bg.jpg");
-    background-position: top left, top center;
-    background-repeat: no-repeat, no-repeat;
-    background-size: 50% 100%, cover;
-    min-height: 500px; }
-  .news__grid--container header.post {
-    background-image: url("../img/red-shade.png"), url("../img/post-bg.jpg");
-    background-position: top left, top center;
-    background-repeat: no-repeat, no-repeat;
-    background-size: 50% 100%, cover;
-    min-height: 500px; }
-  .news__grid--container header.blog {
-    background-image: url("../img/gold-shade.png"), url("../img/blog-bg.jpg");
     background-position: top left, top center;
     background-repeat: no-repeat, no-repeat;
     background-size: 50% 100%, cover;

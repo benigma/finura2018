@@ -70,22 +70,8 @@
             }
         }
 
-        &.news {
+        &.news, &.post, &.blog {
             background-image: url('../img/purple-shade.png'), url('../img/news-bg.jpg');
-            background-position: top left, top center;
-            background-repeat: no-repeat, no-repeat;
-            background-size: 50% 100%, cover;
-            min-height: 500px;
-        }
-        &.post {
-            background-image: url('../img/red-shade.png'), url('../img/post-bg.jpg');
-            background-position: top left, top center;
-            background-repeat: no-repeat, no-repeat;
-            background-size: 50% 100%, cover;
-            min-height: 500px;
-        }
-        &.blog {
-            background-image: url('../img/gold-shade.png'), url('../img/blog-bg.jpg');
             background-position: top left, top center;
             background-repeat: no-repeat, no-repeat;
             background-size: 50% 100%, cover;
