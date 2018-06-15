@@ -1096,6 +1096,7 @@
         background: url('../img/csr-bg.jpg') no-repeat center;
         background-size: cover;
         border-bottom: none;
+        border-top: 4px solid $lightblue;
     }
 
     &.how-work {
@@ -1649,7 +1650,7 @@
         }
 
         & .side img {
-            height: 175px;
+            height: 100%;
             width: 8px;
             display: block;
             box-sizing: border-box;
@@ -2111,7 +2112,7 @@
             margin: 0px;
             margin-left: 48px;
             @include primary-font(300);
-            font-size: 0.875em;
+            font-size: 0.75em;
 
             &::first-of-type {
                 @include primary-font(300);

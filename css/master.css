@@ -71,7 +71,7 @@ table {
 
 h1 {
   font-family: "aleolight", Arial, sans-serif;
-  font-size: 2.75em;
+  font-size: 2.5em;
   color: #BD9F67;
   text-transform: uppercase;
   line-height: 1.1875; }
@@ -1095,7 +1095,8 @@ nav {
   .row.csr {
     background: url("../img/csr-bg.jpg") no-repeat center;
     background-size: cover;
-    border-bottom: none; }
+    border-bottom: none;
+    border-top: 4px solid #C3EDFF; }
   .row.how-work {
     background: url("../img/how-work-bg.jpg") no-repeat center;
     background-size: cover;
@@ -1482,7 +1483,7 @@ nav {
       grid-column: 2;
       grid-row: 7; }
     .row .how-process-map .side img {
-      height: 175px;
+      height: 100%;
       width: 8px;
       display: block;
       box-sizing: border-box; }
@@ -1818,7 +1819,7 @@ nav {
       font-family: 'Roboto', Arial, sans-serif;
       font-style: normal;
       font-weight: 300;
-      font-size: 0.875em; }
+      font-size: 0.75em; }
       .fees-documents .document p::first-of-type {
         font-family: 'Roboto', Arial, sans-serif;
         font-style: normal;
