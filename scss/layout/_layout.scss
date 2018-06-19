@@ -1083,7 +1083,7 @@
         }
     }
     & .why-csr {
-        grid-column: 2/8;
+        grid-column: 2/10;
         padding: 96px 64px;
         align-self: center;
 
@@ -1096,7 +1096,7 @@
         background: url('../img/csr-bg.jpg') no-repeat center;
         background-size: cover;
         border-bottom: none;
-        border-top: 4px solid $lightblue;
+        border-top: 4px solid $gold;
     }
 
     &.how-work {

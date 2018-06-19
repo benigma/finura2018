@@ -1087,7 +1087,7 @@ nav {
       background: url("../img/why-thinking-alt.jpg") no-repeat center;
       background-size: cover; }
   .row .why-csr {
-    grid-column: 2/8;
+    grid-column: 2/10;
     padding: 96px 64px;
     align-self: center; }
     .row .why-csr p {
@@ -1096,7 +1096,7 @@ nav {
     background: url("../img/csr-bg.jpg") no-repeat center;
     background-size: cover;
     border-bottom: none;
-    border-top: 4px solid #C3EDFF; }
+    border-top: 4px solid #BD9F67; }
   .row.how-work {
     background: url("../img/how-work-bg.jpg") no-repeat center;
     background-size: cover;
