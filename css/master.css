@@ -179,7 +179,7 @@ input[type="text"], input[type="tel"], input[type="email"], input[type="search"]
   font-family: 'Roboto', Arial, sans-serif;
   font-style: normal;
   font-weight: 300;
-  font-size: 1em;
+  font-size: 16px;
   font-weight: 300;
   -webkit-appearance: none; }
 
@@ -251,12 +251,12 @@ nav {
       width: 120px;
       max-width: 120px;
       height: auto; }
-  nav .menu {
+  nav .line-menu {
     grid-column: 12; }
-    nav .menu img {
+    nav .line-menu img {
       width: 50px;
       height: auto; }
-    nav .menu:hover {
+    nav .line-menu:hover {
       cursor: pointer; }
 
 #navigation__container {
@@ -470,7 +470,7 @@ nav {
     grid-column: 1/13;
     grid-row: auto;
     display: grid;
-    grid-template-columns: auto 32px 32px;
+    grid-template-columns: auto;
     grid-template-rows: 32px;
     grid-column-gap: 12px;
     font-size: 0.8125em;
@@ -821,34 +821,34 @@ nav {
         font-size: 0.875em; }
       .service__container header.what section .intro a.button {
         margin-top: 16px; }
-  .service__container header.tax {
+  .service__container header.page-id-247 {
     background-image: url("../img/purple-shade.png"), url("../img/tax-bg.jpg");
     background-position: top left, top center;
     background-repeat: no-repeat, no-repeat;
     background-size: 50% 100%, cover; }
-  .service__container header.mortgage {
+  .service__container header.page-id-814 {
     background-image: url("../img/purple-shade.png"), url("../img/mortgage-bg.jpg");
     background-position: top left, top center;
     background-repeat: no-repeat, no-repeat;
     background-size: 50% 100%, cover; }
-  .service__container header.retirement {
+  .service__container header.page-id-257 {
     background-image: url("../img/purple-shade.png"), url("../img/retirement-bg.jpg");
     background-position: top left, top center;
     background-repeat: no-repeat, no-repeat;
     background-size: 50% 100%, cover; }
-  .service__container header.estate {
+  .service__container header.page-id-251 {
     background-image: url("../img/purple-shade.png"), url("../img/estate-bg.jpg");
     background-position: top left, top center;
     background-repeat: no-repeat, no-repeat;
     background-size: 50% 100%, cover; }
-  .service__container header.insurance {
+  .service__container header.page-id-253 {
     background-image: url("../img/gold-shade.png"), url("../img/insurance-bg.jpg");
     background-position: top left, top center;
     background-repeat: no-repeat, no-repeat;
     background-size: 50% 100%, cover; }
-    .service__container header.insurance .intro h1 {
+    .service__container header.page-id-253 .intro h1 {
       color: #C3EDFF; }
-  .service__container header.sme {
+  .service__container header.page-id-255 {
     background-image: url("../img/purple-shade.png"), url("../img/sme-bg.jpg");
     background-position: top left, top center;
     background-repeat: no-repeat, no-repeat;
@@ -1784,6 +1784,17 @@ nav {
   grid-column: 7/12;
   padding: 128px 0px 64px; }
 
+div.wpcf7 p {
+  font-family: 'Roboto', Arial, sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 0.75em; }
+  div.wpcf7 p::first-of-type {
+    font-family: 'Roboto', Arial, sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 0.75em; }
+
 .fees-section {
   grid-column: 1/8;
   padding: 64px 0px 64px 64px; }
@@ -1976,6 +1987,31 @@ nav {
       flex-direction: column;
       flex-wrap: nowrap; }
 
+.pagination {
+  width: 100%;
+  font-family: 'Roboto', Arial, sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  padding: 24px 0px;
+  font-size: 12px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center; }
+  .pagination span, .pagination a.inactive {
+    margin-right: 8px; }
+    .pagination span.current, .pagination a.inactive.current {
+      margin-right: 8px;
+      padding: 12px;
+      background: #C3EDFF;
+      color: #FFF; }
+  .pagination a.inactive {
+    margin-right: 8px;
+    padding: 12px;
+    background: #094970;
+    text-decoration: none;
+    color: #FFF; }
+
 footer {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
@@ -2148,7 +2184,7 @@ footer.home {
     nav .logo img {
       width: 80px;
       height: auto; }
-    nav .menu img {
+    nav .line-menu img {
       width: 35px; }
 
   .home__container {
@@ -2264,16 +2300,16 @@ footer.home {
           padding: 24px 24px; }
           .service__container header.who .intro p {
             font-size: 0.8125em; }
-      .service__container header.tax, .service__container header.mortgage, .service__container header.retirement, .service__container header.estate, .service__container header.insurance, .service__container header.sme {
+      .service__container header.page-id-247, .service__container header.page-id-814, .service__container header.page-id-257, .service__container header.page-id-251, .service__container header.page-id-253, .service__container header.page-id-255 {
         background-position: top left, top center;
         background-repeat: no-repeat, no-repeat;
         background-size: cover, cover; }
-        .service__container header.tax .intro, .service__container header.mortgage .intro, .service__container header.retirement .intro, .service__container header.estate .intro, .service__container header.insurance .intro, .service__container header.sme .intro {
+        .service__container header.page-id-247 .intro, .service__container header.page-id-814 .intro, .service__container header.page-id-257 .intro, .service__container header.page-id-251 .intro, .service__container header.page-id-253 .intro, .service__container header.page-id-255 .intro {
           grid-column: 1/13;
           padding: 24px 24px; }
-          .service__container header.tax .intro p, .service__container header.mortgage .intro p, .service__container header.retirement .intro p, .service__container header.estate .intro p, .service__container header.insurance .intro p, .service__container header.sme .intro p {
+          .service__container header.page-id-247 .intro p, .service__container header.page-id-814 .intro p, .service__container header.page-id-257 .intro p, .service__container header.page-id-251 .intro p, .service__container header.page-id-253 .intro p, .service__container header.page-id-255 .intro p {
             font-size: 0.8125em; }
-        .service__container header.tax .scroll a img, .service__container header.mortgage .scroll a img, .service__container header.retirement .scroll a img, .service__container header.estate .scroll a img, .service__container header.insurance .scroll a img, .service__container header.sme .scroll a img {
+        .service__container header.page-id-247 .scroll a img, .service__container header.page-id-814 .scroll a img, .service__container header.page-id-257 .scroll a img, .service__container header.page-id-251 .scroll a img, .service__container header.page-id-253 .scroll a img, .service__container header.page-id-255 .scroll a img {
           width: 32px;
           height: auto; }
       .service__container header .page__introduction {
@@ -2359,10 +2395,10 @@ footer.home {
         grid-row: 1; }
         .news__grid--container .news__stories--grid .main__stories--grid .main__story--left {
           grid-column: 1/3;
-          grid-row: 2; }
+          grid-row: auto; }
         .news__grid--container .news__stories--grid .main__stories--grid .main__story--right {
           grid-column: 1/3;
-          grid-row: 3; }
+          grid-row: auto; }
       .news__grid--container .news__stories--grid .side__strories--grid {
         grid-column: 1/13;
         grid-row: 4;
@@ -2462,6 +2498,24 @@ footer.home {
       .row .how-process-map .point-one, .row .how-process-map .point-two, .row .how-process-map .point-three, .row .how-process-map .point-four, .row .how-process-map .point-five, .row .how-process-map .point-six, .row .how-process-map .point-seven, .row .how-process-map .point-eight, .row .how-process-map .point-nine, .row .how-process-map .point-ten, .row .how-process-map .point-eleven, .row .how-process-map .point-twelve {
         grid-column: 1/13;
         grid-row: auto; }
+      .row .how-process-map .point-one {
+        order: 1; }
+      .row .how-process-map .point-two {
+        order: 2; }
+      .row .how-process-map .point-three {
+        order: 3; }
+      .row .how-process-map .point-four {
+        order: 4; }
+      .row .how-process-map .point-five {
+        order: 5; }
+      .row .how-process-map .point-six {
+        order: 6; }
+      .row .how-process-map .point-seven {
+        order: 9; }
+      .row .how-process-map .point-eight {
+        order: 8; }
+      .row .how-process-map .point-nine {
+        order: 7; }
     .row .how-technology {
       grid-column: 1/13;
       padding: 48px 24px; }
@@ -2640,7 +2694,7 @@ footer.home {
     nav .logo img {
       width: 80px;
       height: auto; }
-    nav .menu img {
+    nav .line-menu img {
       width: 35px; }
 
   .home__container {
@@ -2756,16 +2810,16 @@ footer.home {
           padding: 24px 24px; }
           .service__container header.who .intro p {
             font-size: 0.8125em; }
-      .service__container header.tax, .service__container header.mortgage, .service__container header.retirement, .service__container header.estate, .service__container header.insurance, .service__container header.sme {
+      .service__container header.page-id-247, .service__container header.page-id-814, .service__container header.page-id-257, .service__container header.page-id-251, .service__container header.page-id-253, .service__container header.page-id-255 {
         background-position: top left, top center;
         background-repeat: no-repeat, no-repeat;
         background-size: cover, cover; }
-        .service__container header.tax .intro, .service__container header.mortgage .intro, .service__container header.retirement .intro, .service__container header.estate .intro, .service__container header.insurance .intro, .service__container header.sme .intro {
+        .service__container header.page-id-247 .intro, .service__container header.page-id-814 .intro, .service__container header.page-id-257 .intro, .service__container header.page-id-251 .intro, .service__container header.page-id-253 .intro, .service__container header.page-id-255 .intro {
           grid-column: 1/13;
           padding: 24px 24px; }
-          .service__container header.tax .intro p, .service__container header.mortgage .intro p, .service__container header.retirement .intro p, .service__container header.estate .intro p, .service__container header.insurance .intro p, .service__container header.sme .intro p {
+          .service__container header.page-id-247 .intro p, .service__container header.page-id-814 .intro p, .service__container header.page-id-257 .intro p, .service__container header.page-id-251 .intro p, .service__container header.page-id-253 .intro p, .service__container header.page-id-255 .intro p {
             font-size: 0.8125em; }
-        .service__container header.tax .scroll a img, .service__container header.mortgage .scroll a img, .service__container header.retirement .scroll a img, .service__container header.estate .scroll a img, .service__container header.insurance .scroll a img, .service__container header.sme .scroll a img {
+        .service__container header.page-id-247 .scroll a img, .service__container header.page-id-814 .scroll a img, .service__container header.page-id-257 .scroll a img, .service__container header.page-id-251 .scroll a img, .service__container header.page-id-253 .scroll a img, .service__container header.page-id-255 .scroll a img {
           width: 32px;
           height: auto; }
       .service__container header .page__introduction {
@@ -2851,10 +2905,10 @@ footer.home {
         grid-row: 1; }
         .news__grid--container .news__stories--grid .main__stories--grid .main__story--left {
           grid-column: 1/3;
-          grid-row: 2; }
+          grid-row: auto; }
         .news__grid--container .news__stories--grid .main__stories--grid .main__story--right {
           grid-column: 1/3;
-          grid-row: 3; }
+          grid-row: auto; }
       .news__grid--container .news__stories--grid .side__strories--grid {
         grid-column: 1/13;
         grid-row: 4;
@@ -2954,6 +3008,24 @@ footer.home {
       .row .how-process-map .point-one, .row .how-process-map .point-two, .row .how-process-map .point-three, .row .how-process-map .point-four, .row .how-process-map .point-five, .row .how-process-map .point-six, .row .how-process-map .point-seven, .row .how-process-map .point-eight, .row .how-process-map .point-nine, .row .how-process-map .point-ten, .row .how-process-map .point-eleven, .row .how-process-map .point-twelve {
         grid-column: 1/13;
         grid-row: auto; }
+      .row .how-process-map .point-one {
+        order: 1; }
+      .row .how-process-map .point-two {
+        order: 2; }
+      .row .how-process-map .point-three {
+        order: 3; }
+      .row .how-process-map .point-four {
+        order: 4; }
+      .row .how-process-map .point-five {
+        order: 5; }
+      .row .how-process-map .point-six {
+        order: 6; }
+      .row .how-process-map .point-seven {
+        order: 9; }
+      .row .how-process-map .point-eight {
+        order: 8; }
+      .row .how-process-map .point-nine {
+        order: 7; }
     .row .how-technology {
       grid-column: 1/13;
       padding: 48px 24px; }
@@ -3132,7 +3204,7 @@ footer.home {
     nav .logo img {
       width: 80px;
       height: auto; }
-    nav .menu img {
+    nav .line-menu img {
       width: 35px; }
 
   .home__container {
@@ -3248,16 +3320,16 @@ footer.home {
           padding: 24px 24px; }
           .service__container header.who .intro p {
             font-size: 0.8125em; }
-      .service__container header.tax, .service__container header.mortgage, .service__container header.retirement, .service__container header.estate, .service__container header.insurance, .service__container header.sme {
+      .service__container header.page-id-247, .service__container header.page-id-814, .service__container header.page-id-257, .service__container header.page-id-251, .service__container header.page-id-253, .service__container header.page-id-255 {
         background-position: top left, top center;
         background-repeat: no-repeat, no-repeat;
         background-size: cover, cover; }
-        .service__container header.tax .intro, .service__container header.mortgage .intro, .service__container header.retirement .intro, .service__container header.estate .intro, .service__container header.insurance .intro, .service__container header.sme .intro {
+        .service__container header.page-id-247 .intro, .service__container header.page-id-814 .intro, .service__container header.page-id-257 .intro, .service__container header.page-id-251 .intro, .service__container header.page-id-253 .intro, .service__container header.page-id-255 .intro {
           grid-column: 1/13;
           padding: 24px 24px; }
-          .service__container header.tax .intro p, .service__container header.mortgage .intro p, .service__container header.retirement .intro p, .service__container header.estate .intro p, .service__container header.insurance .intro p, .service__container header.sme .intro p {
+          .service__container header.page-id-247 .intro p, .service__container header.page-id-814 .intro p, .service__container header.page-id-257 .intro p, .service__container header.page-id-251 .intro p, .service__container header.page-id-253 .intro p, .service__container header.page-id-255 .intro p {
             font-size: 0.8125em; }
-        .service__container header.tax .scroll a img, .service__container header.mortgage .scroll a img, .service__container header.retirement .scroll a img, .service__container header.estate .scroll a img, .service__container header.insurance .scroll a img, .service__container header.sme .scroll a img {
+        .service__container header.page-id-247 .scroll a img, .service__container header.page-id-814 .scroll a img, .service__container header.page-id-257 .scroll a img, .service__container header.page-id-251 .scroll a img, .service__container header.page-id-253 .scroll a img, .service__container header.page-id-255 .scroll a img {
           width: 32px;
           height: auto; }
       .service__container header .page__introduction {
@@ -3343,10 +3415,10 @@ footer.home {
         grid-row: 1; }
         .news__grid--container .news__stories--grid .main__stories--grid .main__story--left {
           grid-column: 1/3;
-          grid-row: 2; }
+          grid-row: auto; }
         .news__grid--container .news__stories--grid .main__stories--grid .main__story--right {
           grid-column: 1/3;
-          grid-row: 3; }
+          grid-row: auto; }
       .news__grid--container .news__stories--grid .side__strories--grid {
         grid-column: 1/13;
         grid-row: 4;
@@ -3446,6 +3518,24 @@ footer.home {
       .row .how-process-map .point-one, .row .how-process-map .point-two, .row .how-process-map .point-three, .row .how-process-map .point-four, .row .how-process-map .point-five, .row .how-process-map .point-six, .row .how-process-map .point-seven, .row .how-process-map .point-eight, .row .how-process-map .point-nine, .row .how-process-map .point-ten, .row .how-process-map .point-eleven, .row .how-process-map .point-twelve {
         grid-column: 1/13;
         grid-row: auto; }
+      .row .how-process-map .point-one {
+        order: 1; }
+      .row .how-process-map .point-two {
+        order: 2; }
+      .row .how-process-map .point-three {
+        order: 3; }
+      .row .how-process-map .point-four {
+        order: 4; }
+      .row .how-process-map .point-five {
+        order: 5; }
+      .row .how-process-map .point-six {
+        order: 6; }
+      .row .how-process-map .point-seven {
+        order: 9; }
+      .row .how-process-map .point-eight {
+        order: 8; }
+      .row .how-process-map .point-nine {
+        order: 7; }
     .row .how-technology {
       grid-column: 1/13;
       padding: 48px 24px; }

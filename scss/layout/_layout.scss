@@ -196,7 +196,7 @@
             grid-column: 1/13;
             grid-row: auto;
             display: grid;
-            grid-template-columns: auto 32px 32px;
+            grid-template-columns: auto;
             grid-template-rows: 32px;
             grid-column-gap: 12px;
             font-size: 0.8125em;
@@ -701,31 +701,31 @@
             }
         }
 
-        &.tax {
+        &.page-id-247 {
             background-image: url('../img/purple-shade.png'), url('../img/tax-bg.jpg');
             background-position: top left, top center;
             background-repeat: no-repeat, no-repeat;
             background-size: 50% 100%, cover;
         }
-        &.mortgage {
+        &.page-id-814 {
             background-image: url('../img/purple-shade.png'), url('../img/mortgage-bg.jpg');
             background-position: top left, top center;
             background-repeat: no-repeat, no-repeat;
             background-size: 50% 100%, cover;
         }
-        &.retirement {
+        &.page-id-257 {
             background-image: url('../img/purple-shade.png'), url('../img/retirement-bg.jpg');
             background-position: top left, top center;
             background-repeat: no-repeat, no-repeat;
             background-size: 50% 100%, cover;
         }
-        &.estate {
+        &.page-id-251 {
             background-image: url('../img/purple-shade.png'), url('../img/estate-bg.jpg');
             background-position: top left, top center;
             background-repeat: no-repeat, no-repeat;
             background-size: 50% 100%, cover;
         }
-        &.insurance {
+        &.page-id-253 {
             background-image: url('../img/gold-shade.png'), url('../img/insurance-bg.jpg');
             background-position: top left, top center;
             background-repeat: no-repeat, no-repeat;
@@ -738,7 +738,7 @@
                 }
             }
         }
-        &.sme {
+        &.page-id-255 {
             background-image: url('../img/purple-shade.png'), url('../img/sme-bg.jpg');
             background-position: top left, top center;
             background-repeat: no-repeat, no-repeat;
@@ -2071,6 +2071,17 @@
     grid-column: 7/12;
     padding: 128px 0px 64px;
 }
+div.wpcf7 {
+    & p {
+        @include primary-font(300);
+        font-size: 0.75em;
+
+        &::first-of-type {
+            @include primary-font(300);
+            font-size: 0.75em;
+        }
+    }
+}
 
 // Fees Page
 .fees-section {
@@ -2319,6 +2330,36 @@
                 flex-wrap: nowrap;
             }
         }
+    }
+}
+
+.pagination {
+    width: 100%;
+    @include primary-font(300);
+    padding: 24px 0px;
+    font-size: 12px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+
+    & span, a.inactive {
+        margin-right: 8px;
+
+        &.current {
+            margin-right: 8px;
+            padding: 12px;
+            background: $lightblue;
+            color: #FFF;
+        }
+    }
+
+    a.inactive {
+        margin-right: 8px;
+        padding: 12px;
+        background: $orange;
+        text-decoration: none;
+        color: #FFF;
     }
 }
 
