@@ -399,6 +399,10 @@ nav {
   grid-template-rows: auto;
   grid-column-gap: 1.5em;
   padding: 64px; }
+  .news__grid--container .news__stories--grid h3 {
+    grid-row: auto;
+    grid-column: 1/8;
+    color: #094970; }
   .news__grid--container .news__stories--grid .main__stories--grid {
     grid-column: 1/8;
     display: grid;

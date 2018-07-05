@@ -39,7 +39,7 @@
 
         <h3><strong>Market</strong> Commentary</h3>
         <?php $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
-        query_posts('cat=6&posts_per_page=4&paged=' . $paged); ?>
+        query_posts('cat=5&posts_per_page=4&paged=' . $paged); ?>
             <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
                 <div class="side__story--item">
                     <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
@@ -49,7 +49,7 @@
 
         <h3>Quarterly <strong>Reports</strong></h3>
         <?php $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
-        query_posts('cat=5&posts_per_page=4&paged=' . $paged); ?>
+        query_posts('cat=6&posts_per_page=4&paged=' . $paged); ?>
             <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
                 <div class="side__story--item">
                     <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>

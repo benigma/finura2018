@@ -88,6 +88,12 @@
         grid-column-gap: 1.5em;
         padding: 64px;
 
+        & h3 {
+            grid-row: auto;
+            grid-column: 1/8;
+            color: $purple;
+        }
+
         & .main__stories--grid {
             grid-column: 1/8;
             display: grid;
